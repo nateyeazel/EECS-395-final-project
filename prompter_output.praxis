@@ -8,8 +8,7 @@ import "characters/rosa_de_la_gomez/character_rosa_de_la_gomez.data"
 
 types
 	hello_world(episode)
-	death(object)
-	gabriel(object)
+	gabriel_s_death(object)
 	marriage(object)
 	rosa(object)
 	bedroom(container)
@@ -40,73 +39,10 @@ types
 end
 
 function.stocker_for_meeting
-	insert data.quip.q0_gabriel_del_torro_1
-	{
-		unique_to_scene!meeting
-		topic.don_ricardo
-		constitutes_action.directly_insult
-		unique_to.gabriel_del_torro
-		handoff_to!don_ricardo
-		introductory
-		tell_text!"You worthless scoundrel."
-		tell_verb!"Insult him"
-	}
-	
-	insert data.quip.q1_gabriel_del_torro_2
-	{
-		unique_to_scene!meeting
-		topic.don_ricardo
-		constitutes_action.directly_insult
-		unique_to.gabriel_del_torro
-		handoff_to!don_ricardo
-		directly_follows.q0_gabriel_del_torro_1
-		tell_text!"Perro!"
-		tell_verb!"Spit On Him"
-	}
-	
-	insert data.quip.q2_gabriel_del_torro_3
-	{
-		unique_to_scene!meeting
-		topic.don_ricardo
-		constitutes_action.pursue_as_friends
-		continuing!don_ricardo
-		unique_to.gabriel_del_torro
-		handoff_to!don_ricardo
-		introductory
-		tell_text!"We were young and foolish."
-		tell_verb!"Try to make amends with Don Ricardo"
-	}
-	
-	insert data.quip.q3_gabriel_del_torro_4
-	{
-		unique_to_scene!meeting
-		topic.rosa
-		constitutes_action.pursue_as_flirts
-		constitutes_action.pursue_as_enemies
-		unique_to.gabriel_del_torro
-		handoff_to!don_ricardo
-		introductory
-		tell_text!"Mi amore!"
-		tell_verb!"Compliment her"
-	}
-	
-	insert data.quip.q4_gabriel_del_torro_5
-	{
-		unique_to_scene!meeting
-		topic.rosa
-		constitutes_action.directly_insult
-		continuing!rosa
-		unique_to.gabriel_del_torro
-		handoff_to!rosa_de_la_gomez
-		introductory
-		tell_text!"You cheap whore!"
-		tell_verb!"Insult her"
-	}
-	
 	insert data.quip.q5_gabriel_del_torro_6
 	{
 		unique_to_scene!meeting
-		topic.death
+		topic.gabriel_s_death
 		constitutes_action.manners_gambit_low
 		unique_to.gabriel_del_torro
 		handoff_to!don_ricardo
@@ -118,7 +54,7 @@ function.stocker_for_meeting
 	insert data.quip.q6_don_ricardo_1
 	{
 		unique_to_scene!meeting
-		topic.death
+		topic.gabriel_s_death
 		unique_to.don_ricardo
 		directly_follows.q5_gabriel_del_torro_6
 		tell_text!"I should have killed you twice!"
@@ -129,7 +65,7 @@ function.stocker_for_meeting
 	insert data.quip.q7_don_ricardo_2
 	{
 		unique_to_scene!meeting
-		topic.death
+		topic.gabriel_s_death
 		unique_to.don_ricardo
 		directly_follows.q5_gabriel_del_torro_6
 		tell_text!"Well... sorry for trying to kill you."
@@ -140,7 +76,7 @@ function.stocker_for_meeting
 	insert data.quip.q8_rosa_de_la_gomez_1
 	{
 		unique_to_scene!meeting
-		topic.death
+		topic.gabriel_s_death
 		unique_to.rosa_de_la_gomez
 		directly_follows.q6_don_ricardo_1
 		directly_follows.q7_don_ricardo_2
@@ -151,7 +87,7 @@ function.stocker_for_meeting
 	insert data.quip.q9_don_ricardo_3
 	{
 		unique_to_scene!meeting
-		topic.death
+		topic.gabriel_s_death
 		constitutes_action.menace_gambit_high
 		unique_to.don_ricardo
 		directly_follows.q8_rosa_de_la_gomez_1
@@ -219,9 +155,10 @@ function.stocker_for_meeting
 	{
 		excludes.gabriel_del_torro
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		handoff_to!gabriel_del_torro
 		introductory
+		condition.{X}[data.quip.q13_rosa_de_la_gomez_2.was_said_by or data.quip.q14_rosa_de_la_gomez_3.was_said_by]
 		tell_text!"But how did you survive?"
 		tell_verb!"Ask how he is still alive"
 	}
@@ -229,7 +166,7 @@ function.stocker_for_meeting
 	insert data.quip.q16_gabriel_del_torro_8
 	{
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		unique_to.gabriel_del_torro
 		directly_follows.q15_anyone_but_gabriel_del_torro_2
 		tell_text!"Well, it's a long story but I'll tell you."
@@ -239,10 +176,10 @@ function.stocker_for_meeting
 	insert data.quip.q17_gabriel_del_torro_9
 	{
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		unique_to.gabriel_del_torro
 		directly_follows.q16_gabriel_del_torro_8
-		tell_text!"As you made sure of, my wounds were too grevious to be fixed by even the finest modern medicine."
+		tell_text!"As you made sure, my wounds were too grevious to be healed by even the finest modern medicine."
 		tell_more.1!"However, in my travels as a younger man, I happened across an old abandoned castle in the middle of France."
 		tell_more.2!"It looked as though no one had been there for hundreds of years."
 		tell_more.3!"When I went inside, I saw an ornate altar glimmering in the single beam of sunlight that broke through the hole in the ceiling."
@@ -253,7 +190,7 @@ function.stocker_for_meeting
 	insert data.quip.q18_don_ricardo_5
 	{
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		unique_to.don_ricardo
 		directly_follows.q17_gabriel_del_torro_9
 		tell_dir!"{A}SPEECH([A] (gasping), <<... The Philosopher's Stone!>>)"
@@ -263,7 +200,7 @@ function.stocker_for_meeting
 	insert data.quip.q19_gabriel_del_torro_10
 	{
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		unique_to.gabriel_del_torro
 		directed_to!{X,Y}[data.quip.q18_don_ricardo_5.was_said_by!Y]
 		directly_follows.q18_don_ricardo_5
@@ -274,7 +211,7 @@ function.stocker_for_meeting
 	insert data.quip.q20_gabriel_del_torro_11
 	{
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		unique_to.gabriel_del_torro
 		directly_follows.q16_gabriel_del_torro_8
 		tell_text!"As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance"
@@ -284,7 +221,7 @@ function.stocker_for_meeting
 	insert data.quip.q21_gabriel_del_torro_12
 	{
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		unique_to.gabriel_del_torro
 		directly_follows.q15_anyone_but_gabriel_del_torro_2
 		tell_text!"Alas, this tale is too close to my heart to reveal right now"
@@ -296,7 +233,7 @@ function.stocker_for_meeting
 	{
 		excludes.gabriel_del_torro
 		unique_to_scene!meeting
-		topic.gabriel
+		topic.gabriel_s_death
 		directly_follows.q19_gabriel_del_torro_10
 		directly_follows.q20_gabriel_del_torro_11
 		directly_follows.q21_gabriel_del_torro_12
@@ -338,10 +275,70 @@ end
 function.start_hello_world_episode
 	call episode_title."Bright New Day"
 	call standard_after_choosing_players
-	insert death.noun!"death"
-	insert gabriel.noun!"gabriel"
+	insert gabriel_s_death.noun!"gabriel's death"
 	insert marriage.noun!"marriage"
 	insert rosa.noun!"rosa"
+	insert data.quip.q0_gabriel_del_torro_1
+	{
+		topic.rosa
+		constitutes_action.pursue_as_flirts
+		constitutes_action.pursue_as_enemies
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		introductory
+		tell_text!"Mi amore!"
+[or]		repeat_text!"[one of]Rosa, I still love you!Rosa, be mine![at random]"
+		tell_verb!"Compliment her"
+	}
+	
+	insert data.quip.q1_gabriel_del_torro_2
+	{
+		topic.rosa
+		constitutes_action.directly_insult
+		continuing!rosa
+		unique_to.gabriel_del_torro
+		handoff_to!rosa_de_la_gomez
+		introductory
+		tell_text!"You cheap whore!"
+		repeat_text!"[one of]You awful bitch![at random]"
+		tell_verb!"Insult her"
+	}
+	
+	insert data.quip.q2_gabriel_del_torro_3
+	{
+		topic.don_ricardo
+		constitutes_action.directly_insult
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		introductory
+		tell_text!"You worthless scoundrel!"
+[or]		repeat_text!"[one of]You slimy dog!Worthless little man![at random]"
+		tell_verb!"Insult him"
+	}
+	
+	insert data.quip.q3_gabriel_del_torro_4
+	{
+		topic.don_ricardo
+		constitutes_action.directly_insult
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		directly_follows.q2_gabriel_del_torro_3
+		tell_text!"Perro!"
+		tell_verb!"Spit On Him"
+	}
+	
+	insert data.quip.q4_gabriel_del_torro_5
+	{
+		topic.don_ricardo
+		constitutes_action.pursue_as_friends
+		continuing!don_ricardo
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		introductory
+		tell_text!"We were young and foolish."
+		tell_verb!"Try to make amends with Don Ricardo"
+	}
+	
 	insert data.scene_data.meeting
 	{
 		noun!"Meeting"

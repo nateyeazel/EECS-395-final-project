@@ -13,18 +13,26 @@ The Heroine ... Rosa De La Gomez
 Don is married to Rosa. Gabriel and Rosa and Don are in the Bedroom.
 Gabriel is a mortal enemy of Don. Gabriel flirts with Rosa. Rosa flirts with Gabriel.   
 
+*** Throughout ***
 
-*** Scene - Meeting ***
+(About Rosa)
 
-Narration: Gabriel swings through the window on a rope into the chambers of Don Ricardo and 
-Rosa. 
->> [Don] says, 'Impossible! You're dead!'
->> [Gabriel] says, 'It is you who soon will be dead!'
->> [Rosa] says, 'Wait! I married Don Ricardo while you were gone! You cannot kill him!'
+(a) Gabriel (deciding to flirt with Rosa, deciding to make an enemy of Don): Mi amore!
+[...] Rosa, I still love you!
+[...] Rosa, be mine!
+-- Compliment her
+
+(b) Gabriel (insulting Rosa): You cheap whore!
+[...] You awful bitch! 
+-- Insult her
+
+(More about Rosa will follow)
 
 (About Don Ricardo)
 
-(a) Gabriel (insulting Don Ricardo): You worthless scoundrel. 
+(a) Gabriel (insulting Don Ricardo): You worthless scoundrel!
+[...] You slimy dog!
+[...] Worthless little man!
 -- Insult him
 
 (aa) Gabriel (insulting Don Ricardo): Perro!
@@ -35,18 +43,15 @@ Rosa.
 
 (More about Don Ricardo will follow)
 
-(About Rosa)
+*** Scene - Meeting ***
 
-(a) Gabriel (deciding to flirt with Rosa, deciding to make an enemy of Don): Mi amore! 
--- Compliment her
+Narration: Gabriel swings through the window on a rope into the chambers of Don Ricardo and 
+Rosa. 
+>> [Don] says, 'Impossible! You're dead!'
+>> [Gabriel] says, 'It is you who soon will be dead!'
+>> [Rosa] says, 'Wait! I married Don Ricardo while you were gone! You cannot kill him!'
 
-(b) Gabriel (insulting Rosa): You cheap whore! 
--- Insult her
-
-(More about Rosa will follow)
-
-
-(About the death.)
+(About Gabriel's death.)
 
 Gabriel (to Don, rudely): That rose bush you pushed me into couldn't kill me!
 -- Accuse Don don of trying to kill you.
@@ -63,14 +68,11 @@ Gabriel (to Don, rudely): That rose bush you pushed me into couldn't kill me!
 Don Ricardo (menacingly): But the hospital said that you had died!
 -- Exclaim that he should be dead
 
-
-
 (About the marriage.)
 
 Anyone: What does this mean about the marriage?
 
 (More about the marriage will follow.)
-
 
 (About the marriage.)
 
@@ -86,7 +88,7 @@ Gabriel: You two were married while I was lying on my deathbed.
 (b) (if Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel, rudely): He is twice the man you ever were!
 --Say that Don Ricardo is the better lover
 
-(About Gabriel.)
+(Later, about Gabriel's death.)
 
 Anyone but Gabriel (To Gabriel): But how did you survive?
 -- Ask how he is still alive
@@ -107,7 +109,6 @@ Gabriel (replying): Indeed! So you now see that you can not hope to live up to m
 -- Finish your tale
 
 (ab) Gabriel: As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance
->>
 -- Say that you joined a roving gang of pirates
 
 (b) Gabriel: Alas, this tale is too close to my heart to reveal right now
