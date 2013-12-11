@@ -1,0 +1,11 @@
+{
+"Name": "Bright New Day"
+"Moniker": "hello_world"
+"Description": ""
+"Author": "Linden Lab"
+"AuthorDescription": ""
+"PraxisFile": "stories/hello_world/prompter_output.praxis"
+"InitFunction": "init_hello_world_episode.X"
+"StartFunction": "start_hello_world_episode"
+"RequiredCharacters": [ "don_ricardo", "gabriel_del_torro", "rosa_de_la_gomez" ]
+}

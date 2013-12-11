@@ -1,0 +1,278 @@
+praxis 1
+import "core/core.type"
+import "characters/gabriel_del_torro/character_gabriel_del_torro.data"
+import "characters/don_ricardo/character_don_ricardo.data"
+import "characters/rosa_de_la_gomez/character_rosa_de_la_gomez.data"
+
+// Generated from playtext by prompter 1.19.
+
+types
+	hello_world(episode)
+	death(object)
+	gabriel(object)
+	marriage(object)
+	rosa(object)
+	bedroom(container)
+	q0_gabriel_del_torro_1(quip)
+	q1_gabriel_del_torro_2(quip)
+	q2_gabriel_del_torro_3(quip)
+	q3_gabriel_del_torro_4(quip)
+	q4_gabriel_del_torro_5(quip)
+	q5_gabriel_del_torro_6(quip)
+	q6_don_ricardo_1(quip)
+	q7_don_ricardo_2(quip)
+	q8_rosa_de_la_gomez_1(quip)
+	q9_anyone_1(quip)
+	q10_gabriel_del_torro_7(quip)
+	q11_don_ricardo_3(quip)
+	q12_rosa_de_la_gomez_2(quip)
+	q13_rosa_de_la_gomez_3(quip)
+	q14_rosa_de_la_gomez_4(quip)
+	meeting(scene)
+end
+
+function.stocker_for_meeting
+	insert data.quip.q0_gabriel_del_torro_1
+	{
+		unique_to_scene!meeting
+		topic.don_ricardo
+		constitutes_action.directly_insult
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		introductory
+		tell_text!"You worthless scoundrel."
+		tell_verb!"Insult him"
+	}
+	
+	insert data.quip.q1_gabriel_del_torro_2
+	{
+		unique_to_scene!meeting
+		topic.don_ricardo
+		constitutes_action.directly_insult
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		directly_follows.q0_gabriel_del_torro_1
+		tell_text!"Perro!"
+		tell_verb!"Spit On Him"
+	}
+	
+	insert data.quip.q2_gabriel_del_torro_3
+	{
+		unique_to_scene!meeting
+		topic.don_ricardo
+		constitutes_action.pursue_as_friends
+		continuing!don_ricardo
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		introductory
+		tell_text!"We were young and foolish."
+		tell_verb!"Try to make amends with Don Ricardo"
+	}
+	
+	insert data.quip.q3_gabriel_del_torro_4
+	{
+		unique_to_scene!meeting
+		topic.rosa
+		constitutes_action.pursue_as_flirts
+		constitutes_action.pursue_as_enemies
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		introductory
+		tell_text!"Mi amore!"
+		tell_verb!"Compliment her"
+	}
+	
+	insert data.quip.q4_gabriel_del_torro_5
+	{
+		unique_to_scene!meeting
+		topic.rosa
+		constitutes_action.directly_insult
+		continuing!rosa
+		unique_to.gabriel_del_torro
+		handoff_to!rosa_de_la_gomez
+		introductory
+		tell_text!"You cheap whore!"
+		tell_verb!"Insult her"
+	}
+	
+	insert data.quip.q5_gabriel_del_torro_6
+	{
+		unique_to_scene!meeting
+		topic.death
+		constitutes_action.manners_gambit_low
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		introductory
+		tell_text!"That rose bush you pushed me into couldn't kill me!"
+		tell_verb!"Accuse Don don of trying to kill you."
+	}
+	
+	insert data.quip.q6_don_ricardo_1
+	{
+		unique_to_scene!meeting
+		topic.death
+		unique_to.don_ricardo
+		directly_follows.q5_gabriel_del_torro_6
+		tell_text!"I should have killed you twice!"
+		tell_verb!"Put him in his place"
+		condition.{X}[don_ricardo.emotion!angry]
+	}
+	
+	insert data.quip.q7_don_ricardo_2
+	{
+		unique_to_scene!meeting
+		topic.death
+		unique_to.don_ricardo
+		directly_follows.q5_gabriel_del_torro_6
+		tell_text!"Well... sorry for trying to kill you."
+		tell_verb!"Try to be friendly"
+		condition.{X}[don_ricardo.emotion!pleased]
+	}
+	
+	insert data.quip.q8_rosa_de_la_gomez_1
+	{
+		unique_to_scene!meeting
+		topic.death
+		unique_to.rosa_de_la_gomez
+		directly_follows.q6_don_ricardo_1
+		directly_follows.q7_don_ricardo_2
+		tell_text!"I'm so happy you are alive!"
+		tell_verb!"Greet Him"
+	}
+	
+	insert data.quip.q9_anyone_1
+	{
+		unique_to_scene!meeting
+		topic.marriage
+		continuing!marriage
+		introductory
+		tell_text!"What does this mean about the marriage?"
+		tell_verb!"Say: What does this mean about the marriage?"
+	}
+	
+	insert data.quip.q10_gabriel_del_torro_7
+	{
+		unique_to_scene!meeting
+		topic.marriage
+		unique_to.gabriel_del_torro
+		introductory
+		tell_text!"You two were married while I was lying on my deathbed."
+		tell_verb!"Discuss the marriage"
+	}
+	
+	insert data.quip.q11_don_ricardo_3
+	{
+		unique_to_scene!meeting
+		topic.marriage
+		unique_to.don_ricardo
+		directly_follows.q10_gabriel_del_torro_7
+		tell_text!"Thats right, you swine! Because I am the better lover!"
+		tell_verb!"Assert you are the better lover"
+		condition.{X}[don_ricardo.emotion!angry]
+	}
+	
+	insert data.quip.q12_rosa_de_la_gomez_2
+	{
+		unique_to_scene!meeting
+		topic.marriage
+		unique_to.rosa_de_la_gomez
+		handoff_to!gabriel_del_torro
+		directly_follows.q11_don_ricardo_3
+		tell_text!"I'm so sorry. I thought you were dead!"
+		tell_verb!"Apologize"
+		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV0 and BV0 >= 1 and BV0 <= 100]
+	}
+	
+	insert data.quip.q13_rosa_de_la_gomez_3
+	{
+		unique_to_scene!meeting
+		topic.marriage
+		constitutes_action.manners_gambit_low
+		unique_to.rosa_de_la_gomez
+		handoff_to!gabriel_del_torro
+		directly_follows.q11_don_ricardo_3
+		tell_text!"He is twice the man you ever were! --Say that Don Ricardo is the better lover"
+		tell_verb!"Say: He is twice the man you ever were! --Say that Don Ricardo is the better lover"
+		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV1 and BV1 >= -100 and BV1 <= -1]
+	}
+	
+	insert data.quip.q14_rosa_de_la_gomez_4
+	{
+		unique_to_scene!meeting
+		topic.gabriel
+		unique_to.rosa_de_la_gomez
+		introductory
+		tell_text!"So what happened to you?"
+		tell_verb!"Ask about Gabriel"
+	}
+	
+end
+
+function.init_hello_world_episode.EPNUM(number)
+	call standard_after_choosing_episode.EPNUM.hello_world.regency
+	insert data.episode.hello_world.role.player1
+	{
+		title!"The Hero"
+		index!1
+		playable!true
+		can_play!{X}[X=gabriel_del_torro]
+	}
+	
+	insert data.episode.hello_world.role.player2
+	{
+		title!"The Villain"
+		index!2
+		playable!false
+		can_play!{X}[X=don_ricardo]
+	}
+	
+	insert data.episode.hello_world.role.player3
+	{
+		title!"The Heroine"
+		index!3
+		playable!false
+		can_play!{X}[X=rosa_de_la_gomez]
+	}
+	
+	insert data.genre_specific.regency.init!regency_init
+end
+
+function.start_hello_world_episode
+	call episode_title."Bright New Day"
+	call standard_after_choosing_players
+	insert death.noun!"death"
+	insert gabriel.noun!"gabriel"
+	insert marriage.noun!"marriage"
+	insert rosa.noun!"rosa"
+	insert data.scene_data.meeting
+	{
+		noun!"Meeting"
+		establish_relationship.don_ricardo.rosa_de_la_gomez!married!"{A}"
+		set_location.gabriel_del_torro!bedroom
+		set_location.rosa_de_la_gomez!bedroom
+		set_location.don_ricardo!bedroom
+		establish_relationship.gabriel_del_torro.don_ricardo!duelists!"{A}"
+		establish_relationship.gabriel_del_torro.rosa_de_la_gomez!flirts!"{A}"
+		establish_relationship.rosa_de_la_gomez.gabriel_del_torro!flirts!"{A}"
+		description!"Gabriel swings through the window on a rope into the chambers of Don Ricardo and Rosa."
+		description_more.1!"[don_ricardo] says, 'Impossible! You're dead!'"
+		description_more.2!"[gabriel_del_torro] says, 'It is you who soon will be dead!'"
+		description_more.3!"[rosa_de_la_gomez] says, 'Wait! I married Don Ricardo while you were gone! You cannot kill him!'"
+		movement_restricted
+		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
+		setup!stocker_for_meeting
+	}
+	
+	call physics_for_hello_world
+	call set_scene.meeting
+end
+
+function.physics_for_hello_world
+	insert bedroom.room!indoors
+	insert bedroom.noun!"The Bedroom"
+	call make_compass_directions_symmetric
+	insert process.movement
+	insert process.movement_to_familiar_places
+	insert global.settings.allow_npcs_to_roam_free
+end
+
