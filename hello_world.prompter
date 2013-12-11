@@ -48,7 +48,7 @@ Rosa.
 >> [Gabriel] says, 'It is you who soon will be dead!'
 >> [Rosa] says, 'Wait! I married Don Ricardo while you were gone! You cannot kill him!'
 
-(About Gabriel's death.)
+(About Gabriel.)
 
 Don: I thought you had been impaled on the thorns of a rose bush!
 
@@ -67,22 +67,17 @@ Gabriel: You couldn't kill me if you tried a thousand times!
 Gabriel (rudely): I care not for your apologies!
 -- Respond defiantly
 
-(>) Rosa: I'm so happy you are alive!
+(>) Rosa (deciding to flirt with Gabriel): I'm so happy you are alive!
 -- Greet Him
 
 Don Ricardo (menacingly): But the hospital said that you had died!
 -- Exclaim that he should be dead
 
-(About the marriage.)
-
-Anyone: What does this mean about the marriage?
---Ask about the marriage
-
-(More about the marriage will follow.)
+(More about Gabriel will follow.)
 
 (About the marriage.)
 
-Gabriel: You two were married while I was lying on my deathbed.
+Gabriel: So you two were married while I was lying on my deathbed.
 -- Discuss the marriage
 
 (if Don is angry) Don: Thats right, you swine! Because I am the better lover!
@@ -94,7 +89,7 @@ Gabriel: You two were married while I was lying on my deathbed.
 (b) (if Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel, rudely): He is twice the man you ever were!
 --Say that Don Ricardo is the better lover
 
-(Later, about Gabriel.)
+(Continuing on Gabriel.)
 
 Anyone but Gabriel (To Gabriel): But how did you survive?
 -- Ask how he is still alive
@@ -102,7 +97,7 @@ Anyone but Gabriel (To Gabriel): But how did you survive?
 (a) Gabriel: Well, it's a long story but I'll tell you.
 -- Wind a tale of adventure and romance
 
-(aa) Gabriel: As you made sure, my wounds were too grevious to be healed by even the finest modern medicine.
+(aa) Gabriel (attractively, acting masculine): As you made sure, my wounds were too grevious to be healed by even the finest modern medicine.
 >> However, in my travels as a younger man, I happened across an old abandoned castle in the middle of France.
 >> It looked as though no one had been there for hundreds of years. 
 >> When I went inside, I saw an ornate altar glimmering in the single beam of sunlight that broke through the hole in the ceiling.
@@ -111,23 +106,24 @@ Anyone but Gabriel (To Gabriel): But how did you survive?
 
 Don Ricardo ("gasping"):  ... The Philosopher's Stone!
 
-Gabriel (replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from my cowardly trick, and now it's time to finish this once and for all!
+Gabriel (attractively, replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from my cowardly trick, and now it's time to finish this once and for all!
 -- Finish your tale
 
-(ab) Gabriel: As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance.
+(ab) Gabriel (attractively, acting masculine): As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance.
 >> It was none other than the dread pirate ship the Black Skull, captained by the Dread Pirate Smith!
 >> They raided the island the hospital was on, leaving me no choice but to stowaway in their ship.
 -- Say that you joined a roving gang of pirates
 
 Anyone except Gabriel: But how did you get here?
 
-Gabriel: After stowing away I considered my options, and decided that I would need to infiltrate their crew to survive.
+Gabriel: After stowing away I considered my options and decided that I would need to infiltrate their crew to survive.
 >> Eventually I claimed the title of Dread Pirate Smith for myself.
---Say you took over the ship.
 
 Anyone except Gabriel (replying): Wait, Dread Pirate Smith is a title?
 
 Gabriel (replying): Yes, the original Dread Pirate Smith died over 100 years ago.
+
+Rosa (accepting a romantic relationship with Gabriel): Oh my! What a tale!
 
 (a>) (if he is angry) Don Ricardo: I don't believe you! This story must be made up!
 --Disbelieve Gabriel
@@ -139,3 +135,23 @@ Gabriel (assertively): If it's not true, than how am I standing here, hmmm?
 -- Remain mysterious and get back to the point
 
 (>) Anyone but Gabriel: You're right, it's time to settle this dispute
+
+(More about the marriage will follow.)
+
+(About Rosa.)
+
+Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I still only wear black to this day.
+-- Say you grieved
+
+(a) Gabriel (to Rosa, deciding to flirt with Rosa, attractively): I believe you my dear. You are still as beautiful as ever.
+-- Believe Her
+
+(aa) Rosa (accepting a romantic relationship with Gabriel, insulting Don): You know I only ever loved you!
+-- Respond
+
+(b) Gabriel (insulting Rosa): You expect me to believe that? You were probably in on it with him!
+-- Don't Believe Her
+
+(ba) Rosa (insulting Gabriel): I wish he had killed you! You are ruining everything!
+(She becomes visibly angry - "She is shocked that Gabriel did not believe her.")
+-- Retort
