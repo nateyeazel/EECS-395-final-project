@@ -8,6 +8,7 @@ import "characters/rosa_de_la_gomez/character_rosa_de_la_gomez.data"
 
 types
 	hello_world(episode)
+	gabriel(object)
 	gabriel_s_death(object)
 	marriage(object)
 	rosa(object)
@@ -17,95 +18,136 @@ types
 	q2_gabriel_del_torro_3(quip)
 	q3_gabriel_del_torro_4(quip)
 	q4_gabriel_del_torro_5(quip)
-	q5_gabriel_del_torro_6(quip)
-	q6_don_ricardo_1(quip)
+	q5_don_ricardo_1(quip)
+	q6_gabriel_del_torro_6(quip)
 	q7_don_ricardo_2(quip)
-	q8_rosa_de_la_gomez_1(quip)
+	q8_gabriel_del_torro_7(quip)
 	q9_don_ricardo_3(quip)
-	q10_anyone_1(quip)
-	q11_gabriel_del_torro_7(quip)
+	q10_gabriel_del_torro_8(quip)
+	q11_rosa_de_la_gomez_1(quip)
 	q12_don_ricardo_4(quip)
-	q13_rosa_de_la_gomez_2(quip)
-	q14_rosa_de_la_gomez_3(quip)
-	q15_anyone_but_gabriel_del_torro_2(quip)
-	q16_gabriel_del_torro_8(quip)
-	q17_gabriel_del_torro_9(quip)
-	q18_don_ricardo_5(quip)
+	q13_anyone_1(quip)
+	q14_gabriel_del_torro_9(quip)
+	q15_don_ricardo_5(quip)
+	q16_rosa_de_la_gomez_2(quip)
+	q17_rosa_de_la_gomez_3(quip)
+	q18_anyone_but_gabriel_del_torro_2(quip)
 	q19_gabriel_del_torro_10(quip)
 	q20_gabriel_del_torro_11(quip)
-	q21_gabriel_del_torro_12(quip)
-	q22_anyone_but_gabriel_del_torro_3(quip)
+	q21_don_ricardo_6(quip)
+	q22_gabriel_del_torro_12(quip)
+	q23_gabriel_del_torro_13(quip)
+	q24_anyone_but_gabriel_del_torro_3(quip)
+	q25_gabriel_del_torro_14(quip)
+	q26_anyone_but_gabriel_del_torro_4(quip)
+	q27_gabriel_del_torro_15(quip)
+	q28_don_ricardo_7(quip)
+	q29_gabriel_del_torro_16(quip)
+	q30_gabriel_del_torro_17(quip)
+	q31_anyone_but_gabriel_del_torro_5(quip)
 	meeting(scene)
 end
 
 function.stocker_for_meeting
-	insert data.quip.q5_gabriel_del_torro_6
+	insert data.quip.q5_don_ricardo_1
+	{
+		unique_to_scene!meeting
+		topic.gabriel_s_death
+		unique_to.don_ricardo
+		introductory
+		tell_text!"I thought you had been impaled on the thorns of a rose bush!"
+		tell_verb!"Say: I thought you had been impaled on the thorns of a rose bush!"
+	}
+	
+	insert data.quip.q6_gabriel_del_torro_6
 	{
 		unique_to_scene!meeting
 		topic.gabriel_s_death
 		constitutes_action.manners_gambit_low
 		unique_to.gabriel_del_torro
 		handoff_to!don_ricardo
-		introductory
-		tell_text!"That rose bush you pushed me into couldn't kill me!"
-		tell_verb!"Accuse Don don of trying to kill you."
-	}
-	
-	insert data.quip.q6_don_ricardo_1
-	{
-		unique_to_scene!meeting
-		topic.gabriel_s_death
-		unique_to.don_ricardo
-		directly_follows.q5_gabriel_del_torro_6
-		tell_text!"I should have killed you twice!"
-		tell_verb!"Put him in his place"
-		condition.{X}[don_ricardo.emotion!angry]
+		directly_follows.q5_don_ricardo_1
+		tell_text!"You mean, you PUSHED me onto the thrones of a rose bush!"
+		tell_verb!"Accuse Don of trying to kill you."
 	}
 	
 	insert data.quip.q7_don_ricardo_2
 	{
 		unique_to_scene!meeting
 		topic.gabriel_s_death
+		constitutes_action.menace_gambit_high
 		unique_to.don_ricardo
-		directly_follows.q5_gabriel_del_torro_6
-		tell_text!"Well... sorry for trying to kill you."
-		tell_verb!"Try to be friendly"
-		condition.{X}[don_ricardo.emotion!pleased]
+		directly_follows.q6_gabriel_del_torro_6
+		tell_text!"I should have killed you twice!"
+		tell_verb!"Put him in his place"
+		condition.{X}[don_ricardo.emotion!angry]
 	}
 	
-	insert data.quip.q8_rosa_de_la_gomez_1
+	insert data.quip.q8_gabriel_del_torro_7
 	{
 		unique_to_scene!meeting
 		topic.gabriel_s_death
-		unique_to.rosa_de_la_gomez
-		directly_follows.q6_don_ricardo_1
+		unique_to.gabriel_del_torro
 		directly_follows.q7_don_ricardo_2
-		tell_text!"I'm so happy you are alive!"
-		tell_verb!"Greet Him"
+		tell_text!"You couldn't kill me if you tried a thousand times!"
+		tell_verb!"Respond defiantly"
 	}
 	
 	insert data.quip.q9_don_ricardo_3
 	{
 		unique_to_scene!meeting
 		topic.gabriel_s_death
+		unique_to.don_ricardo
+		directly_follows.q6_gabriel_del_torro_6
+		tell_text!"Well... sorry for trying to kill you."
+		tell_verb!"Try to be friendly"
+		condition.{X}[don_ricardo.emotion!pleased]
+	}
+	
+	insert data.quip.q10_gabriel_del_torro_8
+	{
+		unique_to_scene!meeting
+		topic.gabriel_s_death
+		constitutes_action.manners_gambit_low
+		unique_to.gabriel_del_torro
+		directly_follows.q9_don_ricardo_3
+		tell_text!"I care not for your apologies!"
+		tell_verb!"Respond defiantly"
+	}
+	
+	insert data.quip.q11_rosa_de_la_gomez_1
+	{
+		unique_to_scene!meeting
+		topic.gabriel_s_death
+		unique_to.rosa_de_la_gomez
+		directly_follows.q8_gabriel_del_torro_7
+		directly_follows.q10_gabriel_del_torro_8
+		tell_text!"I'm so happy you are alive!"
+		tell_verb!"Greet Him"
+	}
+	
+	insert data.quip.q12_don_ricardo_4
+	{
+		unique_to_scene!meeting
+		topic.gabriel_s_death
 		constitutes_action.menace_gambit_high
 		unique_to.don_ricardo
-		directly_follows.q8_rosa_de_la_gomez_1
+		directly_follows.q11_rosa_de_la_gomez_1
 		tell_text!"But the hospital said that you had died!"
 		tell_verb!"Exclaim that he should be dead"
 	}
 	
-	insert data.quip.q10_anyone_1
+	insert data.quip.q13_anyone_1
 	{
 		unique_to_scene!meeting
 		topic.marriage
 		continuing!marriage
 		introductory
-		tell_text!"What does this mean about the marriage?"
-		tell_verb!"Say: What does this mean about the marriage?"
+		tell_text!"What does this mean about the marriage? --Ask about the marriage"
+		tell_verb!"Say: What does this mean about the marriage? --Ask about the marriage"
 	}
 	
-	insert data.quip.q11_gabriel_del_torro_7
+	insert data.quip.q14_gabriel_del_torro_9
 	{
 		unique_to_scene!meeting
 		topic.marriage
@@ -115,70 +157,70 @@ function.stocker_for_meeting
 		tell_verb!"Discuss the marriage"
 	}
 	
-	insert data.quip.q12_don_ricardo_4
+	insert data.quip.q15_don_ricardo_5
 	{
 		unique_to_scene!meeting
 		topic.marriage
 		unique_to.don_ricardo
-		directly_follows.q11_gabriel_del_torro_7
+		directly_follows.q14_gabriel_del_torro_9
 		tell_text!"Thats right, you swine! Because I am the better lover!"
 		tell_verb!"Assert you are the better lover"
 		condition.{X}[don_ricardo.emotion!angry]
 	}
 	
-	insert data.quip.q13_rosa_de_la_gomez_2
+	insert data.quip.q16_rosa_de_la_gomez_2
 	{
 		unique_to_scene!meeting
 		topic.marriage
 		unique_to.rosa_de_la_gomez
 		handoff_to!gabriel_del_torro
-		directly_follows.q12_don_ricardo_4
+		directly_follows.q15_don_ricardo_5
 		tell_text!"I'm so sorry. I thought you were dead!"
 		tell_verb!"Apologize"
 		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV0 and BV0 >= 1 and BV0 <= 100]
 	}
 	
-	insert data.quip.q14_rosa_de_la_gomez_3
+	insert data.quip.q17_rosa_de_la_gomez_3
 	{
 		unique_to_scene!meeting
 		topic.marriage
 		constitutes_action.manners_gambit_low
 		unique_to.rosa_de_la_gomez
 		handoff_to!gabriel_del_torro
-		directly_follows.q12_don_ricardo_4
+		directly_follows.q15_don_ricardo_5
 		tell_text!"He is twice the man you ever were! --Say that Don Ricardo is the better lover"
 		tell_verb!"Say: He is twice the man you ever were! --Say that Don Ricardo is the better lover"
 		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV1 and BV1 >= -100 and BV1 <= -1]
 	}
 	
-	insert data.quip.q15_anyone_but_gabriel_del_torro_2
+	insert data.quip.q18_anyone_but_gabriel_del_torro_2
 	{
 		excludes.gabriel_del_torro
 		unique_to_scene!meeting
-		topic.gabriel_s_death
+		topic.gabriel
 		handoff_to!gabriel_del_torro
 		introductory
-		condition.{X}[data.quip.q13_rosa_de_la_gomez_2.was_said_by or data.quip.q14_rosa_de_la_gomez_3.was_said_by]
+		condition.{X}[data.quip.q16_rosa_de_la_gomez_2.was_said_by or data.quip.q17_rosa_de_la_gomez_3.was_said_by]
 		tell_text!"But how did you survive?"
 		tell_verb!"Ask how he is still alive"
 	}
 	
-	insert data.quip.q16_gabriel_del_torro_8
+	insert data.quip.q19_gabriel_del_torro_10
 	{
 		unique_to_scene!meeting
-		topic.gabriel_s_death
+		topic.gabriel
 		unique_to.gabriel_del_torro
-		directly_follows.q15_anyone_but_gabriel_del_torro_2
+		directly_follows.q18_anyone_but_gabriel_del_torro_2
 		tell_text!"Well, it's a long story but I'll tell you."
 		tell_verb!"Wind a tale of adventure and romance"
 	}
 	
-	insert data.quip.q17_gabriel_del_torro_9
+	insert data.quip.q20_gabriel_del_torro_11
 	{
 		unique_to_scene!meeting
-		topic.gabriel_s_death
+		topic.gabriel
 		unique_to.gabriel_del_torro
-		directly_follows.q16_gabriel_del_torro_8
+		directly_follows.q19_gabriel_del_torro_10
 		tell_text!"As you made sure, my wounds were too grevious to be healed by even the finest modern medicine."
 		tell_more.1!"However, in my travels as a younger man, I happened across an old abandoned castle in the middle of France."
 		tell_more.2!"It looked as though no one had been there for hundreds of years."
@@ -187,56 +229,123 @@ function.stocker_for_meeting
 		tell_verb!"Explain that you discovered the secret to immortality"
 	}
 	
-	insert data.quip.q18_don_ricardo_5
+	insert data.quip.q21_don_ricardo_6
 	{
 		unique_to_scene!meeting
-		topic.gabriel_s_death
+		topic.gabriel
 		unique_to.don_ricardo
-		directly_follows.q17_gabriel_del_torro_9
+		directly_follows.q20_gabriel_del_torro_11
 		tell_dir!"{A}SPEECH([A] (gasping), <<... The Philosopher's Stone!>>)"
 		tell_verb!"Say: ... The Philosopher's Stone!"
 	}
 	
-	insert data.quip.q19_gabriel_del_torro_10
+	insert data.quip.q22_gabriel_del_torro_12
 	{
 		unique_to_scene!meeting
-		topic.gabriel_s_death
+		topic.gabriel
 		unique_to.gabriel_del_torro
-		directed_to!{X,Y}[data.quip.q18_don_ricardo_5.was_said_by!Y]
-		directly_follows.q18_don_ricardo_5
+		directed_to!{X,Y}[data.quip.q21_don_ricardo_6.was_said_by!Y]
+		directly_follows.q21_don_ricardo_6
 		tell_text!"Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from my cowardly trick, and now it's time to finish this once and for all!"
 		tell_verb!"Finish your tale"
 	}
 	
-	insert data.quip.q20_gabriel_del_torro_11
+	insert data.quip.q23_gabriel_del_torro_13
 	{
 		unique_to_scene!meeting
-		topic.gabriel_s_death
+		topic.gabriel
 		unique_to.gabriel_del_torro
-		directly_follows.q16_gabriel_del_torro_8
-		tell_text!"As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance"
+		directly_follows.q19_gabriel_del_torro_10
+		tell_text!"As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance."
+		tell_more.1!"It was none other than the dread pirate ship the Black Skull, captained by the Dread Pirate Smith!"
+		tell_more.2!"They raided the island the hospital was on, leaving me no choice but to stowaway in their ship."
 		tell_verb!"Say that you joined a roving gang of pirates"
 	}
 	
-	insert data.quip.q21_gabriel_del_torro_12
+	insert data.quip.q24_anyone_but_gabriel_del_torro_3
+	{
+		excludes.gabriel_del_torro
+		unique_to_scene!meeting
+		topic.gabriel
+		directly_follows.q23_gabriel_del_torro_13
+		tell_text!"But how did you get here?"
+		tell_verb!"Say: But how did you get here?"
+	}
+	
+	insert data.quip.q25_gabriel_del_torro_14
 	{
 		unique_to_scene!meeting
-		topic.gabriel_s_death
+		topic.gabriel
 		unique_to.gabriel_del_torro
-		directly_follows.q15_anyone_but_gabriel_del_torro_2
+		directly_follows.q24_anyone_but_gabriel_del_torro_3
+		tell_text!"After stowing away I considered my options, and decided that I would need to infiltrate their crew to survive."
+		tell_more.1!"Eventually I claimed the title of Dread Pirate Smith for myself. --Say you took over the ship."
+		tell_verb!"Say: After stowing away I considered my options, and decided that I would need to infiltrate their crew to survive. ____PARA____Eventually I claimed the title of Dread Pirate Smith for myself. --Say you took over the ship."
+	}
+	
+	insert data.quip.q26_anyone_but_gabriel_del_torro_4
+	{
+		excludes.gabriel_del_torro
+		unique_to_scene!meeting
+		topic.gabriel
+		directed_to!{X,Y}[data.quip.q25_gabriel_del_torro_14.was_said_by!Y]
+		directly_follows.q25_gabriel_del_torro_14
+		tell_text!"Wait, Dread Pirate Smith is a title?"
+		tell_verb!"Say: Wait, Dread Pirate Smith is a title?"
+	}
+	
+	insert data.quip.q27_gabriel_del_torro_15
+	{
+		unique_to_scene!meeting
+		topic.gabriel
+		unique_to.gabriel_del_torro
+		directed_to!{X,Y}[data.quip.q26_anyone_but_gabriel_del_torro_4.was_said_by!Y]
+		directly_follows.q26_anyone_but_gabriel_del_torro_4
+		tell_text!"Yes, the original Dread Pirate Smith died over 100 years ago."
+		tell_verb!"Say: Yes, the original Dread Pirate Smith died over 100 years ago."
+	}
+	
+	insert data.quip.q28_don_ricardo_7
+	{
+		unique_to_scene!meeting
+		topic.gabriel
+		unique_to.don_ricardo
+		directly_follows.q22_gabriel_del_torro_12
+		directly_follows.q27_gabriel_del_torro_15
+		tell_text!"I don't believe you! This story must be made up! --Disbelieve Gabriel"
+		tell_verb!"Say: I don't believe you! This story must be made up! --Disbelieve Gabriel"
+		condition.{X}[X.emotion!angry]
+	}
+	
+	insert data.quip.q29_gabriel_del_torro_16
+	{
+		unique_to_scene!meeting
+		topic.gabriel
+		constitutes_action.act_assertive
+		unique_to.gabriel_del_torro
+		directly_follows.q28_don_ricardo_7
+		tell_text!"If it's not true, than how am I standing here, hmmm?"
+		tell_verb!"Say: If it's not true, than how am I standing here, hmmm?"
+	}
+	
+	insert data.quip.q30_gabriel_del_torro_17
+	{
+		unique_to_scene!meeting
+		topic.gabriel
+		unique_to.gabriel_del_torro
+		directly_follows.q18_anyone_but_gabriel_del_torro_2
 		tell_text!"Alas, this tale is too close to my heart to reveal right now"
 		tell_more.1!"We must instead get to the heart of this matter."
 		tell_verb!"Remain mysterious and get back to the point"
 	}
 	
-	insert data.quip.q22_anyone_but_gabriel_del_torro_3
+	insert data.quip.q31_anyone_but_gabriel_del_torro_5
 	{
 		excludes.gabriel_del_torro
 		unique_to_scene!meeting
-		topic.gabriel_s_death
-		directly_follows.q19_gabriel_del_torro_10
-		directly_follows.q20_gabriel_del_torro_11
-		directly_follows.q21_gabriel_del_torro_12
+		topic.gabriel
+		directly_follows.q29_gabriel_del_torro_16
+		directly_follows.q30_gabriel_del_torro_17
 		tell_text!"You're right, it's time to settle this dispute"
 		tell_verb!"Say: You're right, it's time to settle this dispute"
 	}
@@ -275,6 +384,7 @@ end
 function.start_hello_world_episode
 	call episode_title."Bright New Day"
 	call standard_after_choosing_players
+	insert gabriel.noun!"gabriel"
 	insert gabriel_s_death.noun!"gabriel's death"
 	insert marriage.noun!"marriage"
 	insert rosa.noun!"rosa"
@@ -287,7 +397,6 @@ function.start_hello_world_episode
 		handoff_to!don_ricardo
 		introductory
 		tell_text!"Mi amore!"
-[or]		repeat_text!"[one of]Rosa, I still love you!Rosa, be mine![at random]"
 		tell_verb!"Compliment her"
 	}
 	
@@ -300,7 +409,6 @@ function.start_hello_world_episode
 		handoff_to!rosa_de_la_gomez
 		introductory
 		tell_text!"You cheap whore!"
-		repeat_text!"[one of]You awful bitch![at random]"
 		tell_verb!"Insult her"
 	}
 	
@@ -312,7 +420,6 @@ function.start_hello_world_episode
 		handoff_to!don_ricardo
 		introductory
 		tell_text!"You worthless scoundrel!"
-[or]		repeat_text!"[one of]You slimy dog!Worthless little man![at random]"
 		tell_verb!"Insult him"
 	}
 	
@@ -323,7 +430,7 @@ function.start_hello_world_episode
 		unique_to.gabriel_del_torro
 		handoff_to!don_ricardo
 		directly_follows.q2_gabriel_del_torro_3
-		tell_text!"Perro!"
+		tell_dir!"{A}SPEECH([A] (spits), <<Perro!>>)"
 		tell_verb!"Spit On Him"
 	}
 	
