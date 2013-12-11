@@ -22,12 +22,14 @@ types
 	q6_don_ricardo_1(quip)
 	q7_don_ricardo_2(quip)
 	q8_rosa_de_la_gomez_1(quip)
-	q9_anyone_1(quip)
-	q10_gabriel_del_torro_7(quip)
-	q11_don_ricardo_3(quip)
-	q12_rosa_de_la_gomez_2(quip)
-	q13_rosa_de_la_gomez_3(quip)
-	q14_rosa_de_la_gomez_4(quip)
+	q9_don_ricardo_3(quip)
+	q10_anyone_but_gabriel_del_torro_1(quip)
+	q11_anyone_2(quip)
+	q12_gabriel_del_torro_7(quip)
+	q13_don_ricardo_4(quip)
+	q14_rosa_de_la_gomez_2(quip)
+	q15_rosa_de_la_gomez_3(quip)
+	q16_rosa_de_la_gomez_4(quip)
 	meeting(scene)
 end
 
@@ -140,7 +142,29 @@ function.stocker_for_meeting
 		tell_verb!"Greet Him"
 	}
 	
-	insert data.quip.q9_anyone_1
+	insert data.quip.q9_don_ricardo_3
+	{
+		unique_to_scene!meeting
+		topic.death
+		constitutes_action.menace_gambit_high
+		unique_to.don_ricardo
+		directly_follows.q8_rosa_de_la_gomez_1
+		tell_text!"But the hospital said that you had died!"
+		tell_verb!"Exclaim that he should be dead"
+	}
+	
+	insert data.quip.q10_anyone_but_gabriel_del_torro_1
+	{
+		excludes.gabriel_del_torro
+		unique_to_scene!meeting
+		topic.gabriel
+		handoff_to!gabriel_del_torro
+		introductory
+		tell_text!"But how did you survive?"
+		tell_verb!"Say: But how did you survive?"
+	}
+	
+	insert data.quip.q11_anyone_2
 	{
 		unique_to_scene!meeting
 		topic.marriage
@@ -150,7 +174,7 @@ function.stocker_for_meeting
 		tell_verb!"Say: What does this mean about the marriage?"
 	}
 	
-	insert data.quip.q10_gabriel_del_torro_7
+	insert data.quip.q12_gabriel_del_torro_7
 	{
 		unique_to_scene!meeting
 		topic.marriage
@@ -160,43 +184,43 @@ function.stocker_for_meeting
 		tell_verb!"Discuss the marriage"
 	}
 	
-	insert data.quip.q11_don_ricardo_3
+	insert data.quip.q13_don_ricardo_4
 	{
 		unique_to_scene!meeting
 		topic.marriage
 		unique_to.don_ricardo
-		directly_follows.q10_gabriel_del_torro_7
+		directly_follows.q12_gabriel_del_torro_7
 		tell_text!"Thats right, you swine! Because I am the better lover!"
 		tell_verb!"Assert you are the better lover"
 		condition.{X}[don_ricardo.emotion!angry]
 	}
 	
-	insert data.quip.q12_rosa_de_la_gomez_2
+	insert data.quip.q14_rosa_de_la_gomez_2
 	{
 		unique_to_scene!meeting
 		topic.marriage
 		unique_to.rosa_de_la_gomez
 		handoff_to!gabriel_del_torro
-		directly_follows.q11_don_ricardo_3
+		directly_follows.q13_don_ricardo_4
 		tell_text!"I'm so sorry. I thought you were dead!"
 		tell_verb!"Apologize"
 		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV0 and BV0 >= 1 and BV0 <= 100]
 	}
 	
-	insert data.quip.q13_rosa_de_la_gomez_3
+	insert data.quip.q15_rosa_de_la_gomez_3
 	{
 		unique_to_scene!meeting
 		topic.marriage
 		constitutes_action.manners_gambit_low
 		unique_to.rosa_de_la_gomez
 		handoff_to!gabriel_del_torro
-		directly_follows.q11_don_ricardo_3
+		directly_follows.q13_don_ricardo_4
 		tell_text!"He is twice the man you ever were! --Say that Don Ricardo is the better lover"
 		tell_verb!"Say: He is twice the man you ever were! --Say that Don Ricardo is the better lover"
 		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV1 and BV1 >= -100 and BV1 <= -1]
 	}
 	
-	insert data.quip.q14_rosa_de_la_gomez_4
+	insert data.quip.q16_rosa_de_la_gomez_4
 	{
 		unique_to_scene!meeting
 		topic.gabriel
