@@ -63,9 +63,6 @@ Gabriel (to Don, rudely): That rose bush you pushed me into couldn't kill me!
 Don Ricardo (menacingly): But the hospital said that you had died!
 -- Exclaim that he should be dead
 
-(About Gabriel.)
-
-Anyone but Gabriel (To Gabriel): But how did you survive?
 
 
 (About the marriage.)
@@ -91,5 +88,32 @@ Gabriel: You two were married while I was lying on my deathbed.
 
 (About Gabriel.)
 
-Rosa: So what happened to you?
--- Ask about Gabriel
+Anyone but Gabriel (To Gabriel): But how did you survive?
+-- Ask how he is still alive
+
+(a) Gabriel: Well, it's a long story but I'll tell you.
+-- Wind a tale of adventure and romance
+
+(aa) Gabriel: As you made sure, my wounds were too grevious to be healed by even the finest modern medicine.
+>> However, in my travels as a younger man, I happened across an old abandoned castle in the middle of France.
+>> It looked as though no one had been there for hundreds of years. 
+>> When I went inside, I saw an ornate altar glimmering in the single beam of sunlight that broke through the hole in the ceiling.
+>> Upon it, there lay a small red stone, transparent and shimmering like glass 
+-- Explain that you discovered the secret to immortality
+
+Don Ricardo ("gasping"):  ... The Philosopher's Stone!
+
+Gabriel (replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from my cowardly trick, and now it's time to finish this once and for all!
+-- Finish your tale
+
+(ab) Gabriel: As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance
+>>
+-- Say that you joined a roving gang of pirates
+
+(b) Gabriel: Alas, this tale is too close to my heart to reveal right now
+>> We must instead get to the heart of this matter.
+-- Remain mysterious and get back to the point
+
+(>) Anyone but Gabriel: You're right, it's time to settle this dispute
+
+(Continuing on to the marriage)
