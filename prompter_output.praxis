@@ -8,6 +8,7 @@ import "characters/rosa_de_la_gomez/character_rosa_de_la_gomez.data"
 
 types
 	hello_world(episode)
+	fighting(object)
 	gabriel(object)
 	marriage(object)
 	rosa(object)
@@ -49,25 +50,55 @@ types
 	q34_rosa_de_la_gomez_6(quip)
 	q35_gabriel_del_torro_19(quip)
 	q36_rosa_de_la_gomez_7(quip)
-	q37_gabriel_del_torro_20(quip)
-	q38_don_ricardo_8(quip)
-	q39_gabriel_del_torro_21(quip)
-	q40_don_ricardo_9(quip)
-	q41_gabriel_del_torro_22(quip)
-	q42_don_ricardo_10(quip)
-	q43_gabriel_del_torro_23(quip)
-	q44_rosa_de_la_gomez_8(quip)
-	q45_rosa_de_la_gomez_9(quip)
-	q46_rosa_de_la_gomez_10(quip)
-	q47_rosa_de_la_gomez_11(quip)
-	q48_rosa_de_la_gomez_12(quip)
-	q49_gabriel_del_torro_24(quip)
-	q50_gabriel_del_torro_25(quip)
-	q51_don_ricardo_11(quip)
-	q52_don_ricardo_12(quip)
-	q53_anyone_5(quip)
+	q37_don_ricardo_8(quip)
+	q38_gabriel_del_torro_20(quip)
+	q39_don_ricardo_9(quip)
+	q40_gabriel_del_torro_21(quip)
+	q41_don_ricardo_10(quip)
+	q42_gabriel_del_torro_22(quip)
+	q43_rosa_de_la_gomez_8(quip)
+	q44_rosa_de_la_gomez_9(quip)
+	q45_rosa_de_la_gomez_10(quip)
+	q46_rosa_de_la_gomez_11(quip)
+	q47_gabriel_del_torro_23(quip)
+	q48_gabriel_del_torro_24(quip)
+	q49_don_ricardo_11(quip)
+	q50_don_ricardo_12(quip)
+	q51_anyone_5(quip)
+	q52_don_ricardo_13(quip)
+	q53_gabriel_del_torro_25(quip)
+	q54_gabriel_del_torro_26(quip)
+	q55_gabriel_del_torro_27(quip)
+	q56_gabriel_del_torro_28(quip)
+	q57_don_ricardo_14(quip)
+	q58_gabriel_del_torro_29(quip)
+	q59_gabriel_del_torro_30(quip)
+	q60_don_ricardo_15(quip)
+	q61_don_ricardo_16(quip)
+	q62_gabriel_del_torro_31(quip)
+	q63_don_ricardo_17(quip)
+	q64_gabriel_del_torro_32(quip)
+	q65_gabriel_del_torro_33(quip)
+	q66_don_ricardo_18(quip)
+	q67_gabriel_del_torro_34(quip)
+	q68_don_ricardo_19(quip)
+	q69_gabriel_del_torro_35(quip)
+	q70_don_ricardo_20(quip)
+	q71_gabriel_del_torro_36(quip)
+	q72_don_ricardo_21(quip)
+	q73_rosa_de_la_gomez_12(quip)
+	q74_anyone_6(quip)
+	q75_anyone_7(quip)
+	q76_anyone_8(quip)
+	q77_anyone_9(quip)
 	conflict(scene)
+	don_wins(scene)
+	gabriel_wins(scene)
 	meeting(scene)
+	rosa_leaves(scene)
+	the_duel(scene)
+	the_game(scene)
+	the_tie(scene)
 end
 
 function.stocker_for_conflict
@@ -157,13 +188,13 @@ function.stocker_for_conflict
 	{
 		unique_to_scene!conflict
 		unique_to.rosa_de_la_gomez
-		directly_follows.q43_gabriel_del_torro_23
-		tell_text!"I hate to see this happen, but this is the only way for Gabriel and I to be together"
-		tell_verb!"Say: I hate to see this happen, but this is the only way for Gabriel and I to be together"
+		directly_follows.q42_gabriel_del_torro_22
+		tell_text!"I hate to see this happen, but this is the only way for Gabriel and I to be together."
+		tell_verb!"Say: I hate to see this happen, but this is the only way for Gabriel and I to be together."
 		condition.{X}[(rosa_de_la_gomez.relationship.don_ricardo.evaluation.romantic_appeal!BV2 and BV2 >= -100 and BV2 <= -1) and (rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV3 and BV3 >= 21 and BV3 <= 50)]
 	}
 	
-	insert data.quip.q46_rosa_de_la_gomez_10
+	insert data.quip.q45_rosa_de_la_gomez_10
 	{
 		unique_to_scene!conflict
 		unique_to.rosa_de_la_gomez
@@ -243,6 +274,28 @@ function.stocker_for_conflict
 		directly_follows.q52_don_ricardo_12
 		tell_text!"With a game of competitive tic tac toe!"
 		tell_verb!"Say: With a game of competitive tic tac toe!"
+	}
+	
+end
+
+function.stocker_for_don_wins
+	insert data.quip.q75_anyone_7
+	{
+		unique_to_scene!don_wins
+		introductory
+		tell_text!"Don Wins Placeholder!"
+		tell_verb!"Say: Don Wins Placeholder!"
+	}
+	
+end
+
+function.stocker_for_gabriel_wins
+	insert data.quip.q74_anyone_6
+	{
+		unique_to_scene!gabriel_wins
+		introductory
+		tell_text!"Gabriel Wins Placeholder!"
+		tell_verb!"Say: Gabriel Wins Placeholder!"
 	}
 	
 end
@@ -629,6 +682,247 @@ function.stocker_for_meeting
 	
 end
 
+function.stocker_for_rosa_leaves
+	insert data.quip.q77_anyone_9
+	{
+		unique_to_scene!rosa_leaves
+		introductory
+		tell_text!"Rosa Leaves Placeholder!"
+		tell_verb!"Say: Rosa Leaves Placeholder!"
+	}
+	
+end
+
+function.stocker_for_the_duel
+	insert data.quip.q52_don_ricardo_13
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.don_ricardo
+		introductory
+		tell_dir!"{A}Don leaps at Gabriel, sword drawn."
+		tell_verb!"Say: Don leaps at Gabriel, sword drawn."
+	}
+	
+	insert data.quip.q53_gabriel_del_torro_25
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.gabriel_del_torro
+		directly_follows.q52_don_ricardo_13
+		tell_dir!"{A}Gabriel blocks with his own sword. --Block the blow"
+		tell_verb!"Say: Gabriel blocks with his own sword. --Block the blow"
+	}
+	
+	insert data.quip.q54_gabriel_del_torro_26
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.gabriel_del_torro
+		directly_follows.q52_don_ricardo_13
+		tell_dir!"{A}Gabriel ducks as Don's sword flies over his head. --Dodge the blow"
+		tell_verb!"Say: Gabriel ducks as Don's sword flies over his head. --Dodge the blow"
+	}
+	
+	insert data.quip.q55_gabriel_del_torro_27
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.gabriel_del_torro
+		directly_follows.q53_gabriel_del_torro_25
+		directly_follows.q54_gabriel_del_torro_26
+		tell_text!"That will not be enough to defeat me!"
+		tell_verb!"Say: That will not be enough to defeat me!"
+	}
+	
+	insert data.quip.q56_gabriel_del_torro_28
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.gabriel_del_torro
+		introductory
+		indirectly_follows.q55_gabriel_del_torro_27
+		tell_dir!"{A}Gabriel takes a wild swing at Don. --Attack recklessly"
+		tell_verb!"Say: Gabriel takes a wild swing at Don. --Attack recklessly"
+	}
+	
+	insert data.quip.q57_don_ricardo_14
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.don_ricardo
+		directly_follows.q56_gabriel_del_torro_28
+		tell_dir!"{A}Don effortlessly dodges the clumsy blow and stabs Gabriel in the torso."
+		tell_verb!"Say: Don effortlessly dodges the clumsy blow and stabs Gabriel in the torso."
+	}
+	
+	insert data.quip.q58_gabriel_del_torro_29
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.gabriel_del_torro
+		introductory
+		indirectly_follows.q55_gabriel_del_torro_27
+		tell_dir!"{A}Gabriel aims precisely at Don's heart. --Attack precisely"
+		tell_verb!"Say: Gabriel aims precisely at Don's heart. --Attack precisely"
+	}
+	
+	insert data.quip.q59_gabriel_del_torro_30
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.gabriel_del_torro
+		introductory
+		indirectly_follows.q55_gabriel_del_torro_27
+		tell_dir!"{A}Gabriel does nothing. --Don't attack."
+		tell_verb!"Say: Gabriel does nothing. --Don't attack."
+	}
+	
+	insert data.quip.q60_don_ricardo_15
+	{
+		unique_to_scene!the_duel
+		topic.fighting
+		unique_to.don_ricardo
+		directly_follows.q59_gabriel_del_torro_30
+		tell_dir!"{A}Don takes the opportunity to stab Gabriel in the torso."
+		tell_verb!"Say: Don takes the opportunity to stab Gabriel in the torso."
+	}
+	
+end
+
+function.stocker_for_the_game
+	insert data.quip.q61_don_ricardo_16
+	{
+		unique_to_scene!the_game
+		unique_to.don_ricardo
+		introductory
+		tell_text!"Ha! I win."
+		tell_verb!"Say: Ha! I win."
+	}
+	
+	insert data.quip.q62_gabriel_del_torro_31
+	{
+		unique_to_scene!the_game
+		constitutes_action.directly_insult
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		directly_follows.q61_don_ricardo_16
+		tell_dir!"{A}SPEECH([A] (drawing his sword), <<You must have cheated!>>)"
+		tell_verb!"Say: You must have cheated!"
+	}
+	
+	insert data.quip.q63_don_ricardo_17
+	{
+		unique_to_scene!the_game
+		unique_to.don_ricardo
+		directly_follows.q62_gabriel_del_torro_31
+		tell_dir!"{A}SPEECH([A] (drawing his sword), <<If you think one can cheat at tic-tac-toe you're even more of a imbecile than I figured!>>)"
+		tell_verb!"Say: If you think one can cheat at tic-tac-toe you're even more of a imbecile than I figured!"
+	}
+	
+	insert data.quip.q64_gabriel_del_torro_32
+	{
+		unique_to_scene!the_game
+		unique_to.gabriel_del_torro
+		directly_follows.q63_don_ricardo_17
+		tell_text!"En garde!"
+		tell_verb!"Say: En garde!"
+	}
+	
+	insert data.quip.q65_gabriel_del_torro_33
+	{
+		unique_to_scene!the_game
+		unique_to.gabriel_del_torro
+		introductory
+		tell_text!"It seems I have defeated you!"
+		tell_verb!"Say: It seems I have defeated you!"
+	}
+	
+	insert data.quip.q66_don_ricardo_18
+	{
+		unique_to_scene!the_game
+		unique_to.don_ricardo
+		directly_follows.q65_gabriel_del_torro_33
+		tell_dir!"{A}SPEECH([A] (drawing his sword), <<Perhaps, but I have another trick up my sleeve!>>)"
+		tell_verb!"Say: Perhaps, but I have another trick up my sleeve!"
+	}
+	
+	insert data.quip.q67_gabriel_del_torro_34
+	{
+		unique_to_scene!the_game
+		unique_to.gabriel_del_torro
+		directly_follows.q66_don_ricardo_18
+		tell_dir!"{A}SPEECH([A] (drawing his sword), <<I'd hoped you would try something like this!>>)"
+		tell_verb!"Say: I'd hoped you would try something like this!"
+	}
+	
+	insert data.quip.q68_don_ricardo_19
+	{
+		unique_to_scene!the_game
+		unique_to.don_ricardo
+		introductory
+		tell_text!"It seems we have tied."
+		tell_verb!"Say: It seems we have tied."
+	}
+	
+	insert data.quip.q69_gabriel_del_torro_35
+	{
+		unique_to_scene!the_game
+		unique_to.gabriel_del_torro
+		directly_follows.q68_don_ricardo_19
+		tell_text!"Indeed."
+		tell_verb!"Say: Indeed."
+	}
+	
+	insert data.quip.q70_don_ricardo_20
+	{
+		unique_to_scene!the_game
+		unique_to.don_ricardo
+		directly_follows.q69_gabriel_del_torro_35
+		tell_text!"What does this mean?"
+		tell_verb!"Say: What does this mean?"
+	}
+	
+	insert data.quip.q71_gabriel_del_torro_36
+	{
+		unique_to_scene!the_game
+		unique_to.gabriel_del_torro
+		directly_follows.q70_don_ricardo_20
+		tell_dir!"{A}SPEECH([A] (after a pause), <<I suppose we both win?>>)"
+		tell_verb!"Say: I suppose we both win?"
+	}
+	
+	insert data.quip.q72_don_ricardo_21
+	{
+		unique_to_scene!the_game
+		unique_to.don_ricardo
+		directly_follows.q71_gabriel_del_torro_36
+		tell_text!"Of course it does, you dolt, but what does it mean for the marriage?"
+		tell_verb!"Say: Of course it does, you dolt, but what does it mean for the marriage?"
+	}
+	
+	insert data.quip.q73_rosa_de_la_gomez_12
+	{
+		unique_to_scene!the_game
+		unique_to.rosa_de_la_gomez
+		directly_follows.q72_don_ricardo_21
+		tell_text!"...Polyamory?"
+		tell_verb!"Say: ...Polyamory?"
+	}
+	
+end
+
+function.stocker_for_the_tie
+	insert data.quip.q76_anyone_8
+	{
+		unique_to_scene!the_tie
+		introductory
+		tell_text!"Tie Placeholder!"
+		tell_verb!"Say: Tie Placeholder!"
+	}
+	
+end
+
 function.init_hello_world_episode.EPNUM(number)
 	call standard_after_choosing_episode.EPNUM.hello_world.regency
 	insert data.episode.hello_world.role.player1
@@ -661,6 +955,7 @@ end
 function.start_hello_world_episode
 	call episode_title."Bright New Day"
 	call standard_after_choosing_players
+	insert fighting.noun!"fighting"
 	insert gabriel.noun!"gabriel"
 	insert marriage.noun!"marriage"
 	insert rosa.noun!"rosa"
@@ -725,10 +1020,32 @@ function.start_hello_world_episode
 	insert data.scene_data.conflict
 	{
 		noun!"Conflict"
-		may_leave.rosa_de_la_gomez
+		conversation_restricted
+		establish_relationship.gabriel_del_torro.rosa_de_la_gomez!rejected_flirts!"{A}"
+		establish_relationship.don_ricardo.rosa_de_la_gomez!rejected_flirts!"{A}"
 		movement_restricted
+		conditional_conclusion.rosa_leaves.null_text!{}[(data.quip.q46_rosa_de_la_gomez_11.was_said_by)]
+		conditional_conclusion.the_duel.null_text!{}[(data.quip.q47_gabriel_del_torro_23.was_said_by) or (data.quip.q49_don_ricardo_11.was_said_by)]
 		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
 		setup!stocker_for_conflict
+	}
+	
+	insert data.scene_data.don_wins
+	{
+		noun!"Don Wins"
+		conversation_restricted
+		movement_restricted
+		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
+		setup!stocker_for_don_wins
+	}
+	
+	insert data.scene_data.gabriel_wins
+	{
+		noun!"Gabriel Wins"
+		conversation_restricted
+		movement_restricted
+		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
+		setup!stocker_for_gabriel_wins
 	}
 	
 	insert data.scene_data.meeting
@@ -749,6 +1066,45 @@ function.start_hello_world_episode
 		optional_conclusion.conflict."Settle the dispute"!"There's only one way to finish this."!{}[gabriel_del_torro.in!BV12 and lull_in_room.BV12]
 		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
 		setup!stocker_for_meeting
+	}
+	
+	insert data.scene_data.rosa_leaves
+	{
+		noun!"Rosa Leaves"
+		conversation_restricted
+		movement_restricted
+		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
+		setup!stocker_for_rosa_leaves
+	}
+	
+	insert data.scene_data.the_duel
+	{
+		noun!"The Duel"
+		conversation_restricted
+		movement_restricted
+		conditional_conclusion.don_wins.null_text!{}[(data.quip.q57_don_ricardo_14.was_said_by) or (data.quip.q60_don_ricardo_15.was_said_by)]
+		conditional_conclusion.gabriel_wins.null_text!{}[(data.quip.q58_gabriel_del_torro_29.was_said_by)]
+		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
+		setup!stocker_for_the_duel
+	}
+	
+	insert data.scene_data.the_game
+	{
+		noun!"The Game"
+		movement_restricted
+		conditional_conclusion.the_duel.null_text!{}[(data.quip.q64_gabriel_del_torro_32.was_said_by) or (data.quip.q67_gabriel_del_torro_34.was_said_by)]
+		conditional_conclusion.the_tie.null_text!{}[(data.quip.q73_rosa_de_la_gomez_12.was_said_by)]
+		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
+		setup!stocker_for_the_game
+	}
+	
+	insert data.scene_data.the_tie
+	{
+		noun!"The Tie"
+		conversation_restricted
+		movement_restricted
+		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
+		setup!stocker_for_the_tie
 	}
 	
 	call physics_for_hello_world

@@ -165,7 +165,11 @@ Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I stil
 
 *** Scene - Conflict ***
 
-(Rosa can walk out.)
+(Conversation is restricted.) 
+//Probably we don't want random flirting happening anymore.
+
+//Probably not a good idea, since she says things later in the scene.
+//(Rosa can walk out.)
 
 Gabriel (to Don) : Well what are we going to do?
 -- Ask how this will end
@@ -190,32 +194,132 @@ Don (to Gabriel) : YES!
 
 (aa)(if Rosa rates Don's romantic appeal as good and Rosa rates Gabriel's romantic appeal as good) Rosa: Wait, please stop this, I cannot have you dying over me! 
 
-(ab) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as good) Rosa: I hate to see this happen, but this is the only way for Gabriel and I to be together
+(ab) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as good) Rosa: I hate to see this happen, but this is the only way for Gabriel and I to be together.
 
 (ac) (if Rosa rates Don's romantic appeal as good and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel): You can't just come into our lives like this and insult us all, get him Don!
 
 (ad) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa: I don't even care who wins, I'm leaving.
 
-(ae) Rosa: Please don't fight!
+(Gabriel has been rejected by Rosa.)
+
+(Don has been rejected by Rosa.)
 
 (a>) Gabriel (without speaking): Not paying any attention to Rosa, the men draw their swords and start circling each other.
-
+//Goes to The Duel.
 
 (b) Gabriel (deciding to pursue a friendly relationship with Don): Don, there's no reason for all of this, aren't we mature enough to settle this peacefully?
 -- Try to make peace
 
 (ba) (if Don rates Gabriel's friendship as worse than neutral) Don: Never! Have at you, you miserable swine!
+//Goes to The Duel.
 
 (bb) (if Don rates Gabriel's friendship as good) Don: Very well, we can just ask Rosa who she prefers.
 
 Anyone: With a game of competitive tic tac toe!
+//Goes to The Game.
 
+(End if "Not paying any attention to Rosa, the men draw their swords..." has been reached and go to The Duel.)
 
+(End if "Never! Have at you, you miserable swine!" has been reached and go to The Duel.)
 
+(End if "I don't even care who wins..." has been reached and go to Rosa Leaves.)
 
+*** Scene - The Duel ***
 
+(Conversation is restricted.)
 
+(About fighting.)
 
+Don (without speaking): Don leaps at Gabriel, sword drawn.
 
+(a) Gabriel (without speaking): Gabriel blocks with his own sword.
+--Block the blow
 
+(b) Gabriel (without speaking): Gabriel ducks as Don's sword flies over his head.
+--Dodge the blow
 
+(>) Gabriel: That will not be enough to defeat me!
+
+(Later, about fighting.)
+
+(a) Gabriel (without speaking): Gabriel takes a wild swing at Don.
+--Attack recklessly
+
+Don (without speaking): Don effortlessly dodges the clumsy blow and stabs Gabriel in the torso.
+
+(b) Gabriel (without speaking): Gabriel aims precisely at Don's heart.
+--Attack precisely
+
+(c) Gabriel (without speaking): Gabriel does nothing.
+--Don't attack.
+
+Don (without speaking): Don takes the opportunity to stab Gabriel in the torso.
+
+(End if "Don effortlessly dodges the clumsy blow..." has been reached and go to Don Wins.)
+
+(End if "Don takes the opportunity..." has been reached and go to Don Wins.)
+
+(End if "Gabriel aims precisely..." has been reached and go to Gabriel Wins.)
+
+*** Scene - The Game ***
+
+(a) Don: Ha! I win.
+
+Gabriel (insulting Don, "drawing his sword"): You must have cheated!
+
+Don ("drawing his sword"): If you think one can cheat at tic-tac-toe you're even more of a imbecile than I figured!
+
+Gabriel: En garde!
+
+(b) Gabriel: It seems I have defeated you!
+
+Don ("drawing his sword"): Perhaps, but I have another trick up my sleeve!
+
+Gabriel ("drawing his sword"): I'd hoped you would try something like this!
+
+(c) Don: It seems we have tied.
+
+Gabriel: Indeed.
+
+Don: What does this mean?
+
+Gabriel ("after a pause"): I suppose we both win?
+
+Don: Of course it does, you dolt, but what does it mean for the marriage?
+
+Rosa: ...Polyamory?
+//Above line forces the "The Tie" ending.
+
+(End if "En garde!" has been reached and go to The Duel.)
+
+(End if "I'd hoped you would try something like this!" has been reached and go to The Duel.)
+
+(End if "...Polyamory?" has been reached and go to The Tie.)
+
+//ENDINGS
+
+*** Scene - Gabriel Wins ***
+
+(Conversation is restricted.)
+
+Anyone: Gabriel Wins Placeholder!
+
+//Gabriel ("stabbing Don through the heart"): 
+
+*** Scene - Don Wins ***
+
+(Conversation is restricted.)
+
+Anyone: Don Wins Placeholder!
+
+*** Scene - The Tie ***
+
+(Conversation is restricted.)
+
+Anyone: Tie Placeholder!
+
+*** Scene - Rosa Leaves ***
+
+(Conversation is restricted.)
+
+Anyone: Rosa Leaves Placeholder!
