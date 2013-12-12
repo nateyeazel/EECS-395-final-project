@@ -147,7 +147,7 @@ Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I stil
 (a) Gabriel (to Rosa, deciding to flirt with Rosa, attractively): I believe you my dear. You are still as beautiful as ever.
 -- Believe Her
 
-(aa) Rosa (accepting a romantic relationship with Gabriel, insulting Don, to Gabriel): You know I only ever loved you!
+(aa) Rosa (accepting a romantic relationship with Gabriel, to Gabriel): You know I only ever loved you!
 -- Respond
 
 (b) Gabriel (insulting Rosa): You expect me to believe that? You were probably in on it with him!
@@ -161,6 +161,49 @@ Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I stil
 
 *** Scene - Conflict ***
 
-(if Don is angry) Don (to Gabriel): I challenge you to a duel!  
+(Rosa can walk out.)
+
+(if Don is angry) Don (to Gabriel): I challenge you to a duel!
+
+Gabriel (to Don) : For Rosa? 
+-- Ask about the stakes 
+
+Don (to Gabriel) : Yes!
+
+Gabriel (to Don) : To the death?
+-- What is the extent?
+
+Don (to Gabriel) : YES!
+
+(a) Gabriel (insulting Don, deciding to kill Don): I accept! Have at you, you miserable vomitous mass!
+-- Accept the duel
+
+(aa)(if Rosa rates Don's romantic appeal as good and Rosa rates Gabriel's romantic appeal as good) Rosa: Wait, please stop this, I cannot have you dying over me! 
+
+(ab) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as good) Rosa: I hate to see this happen, but this is the only way for Gabriel and I to be together
+
+(ac) (if Rosa rates Don's romantic appeal as good and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel): You can't just come into our lives like this and insult us all, get him Don!
+
+(ad) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa: I don't even care who wins, I'm leaving. 
+
+(a>) Gabriel (without speaking): Not paying any attention to Rosa, the men draw their swords and start circling each other.
+
+
+(b) Gabriel (deciding to pursue a friendly relationship with Don): Don, there's no reason for all of this, aren't we mature enough to settle this peacefully?
+-- Try to make peace
+
+(ba) (if Don rates Gabriel's friendship as worse than neutral) Don: Never! Have at you, you miserable swine!
+
+(bb) (if Don rates Gabriel's friendship as good) Don: Very well, we can just ask Rosa who she prefers.
 
 Anyone: With a game of competitive tic tac toe!
+
+
+
+
+
+
+
+
+
+

@@ -49,16 +49,177 @@ types
 	q34_rosa_de_la_gomez_6(quip)
 	q35_gabriel_del_torro_19(quip)
 	q36_rosa_de_la_gomez_7(quip)
-	q37_anyone_5(quip)
+	q37_don_ricardo_8(quip)
+	q38_gabriel_del_torro_20(quip)
+	q39_don_ricardo_9(quip)
+	q40_gabriel_del_torro_21(quip)
+	q41_don_ricardo_10(quip)
+	q42_gabriel_del_torro_22(quip)
+	q43_rosa_de_la_gomez_8(quip)
+	q44_rosa_de_la_gomez_9(quip)
+	q45_rosa_de_la_gomez_10(quip)
+	q46_rosa_de_la_gomez_11(quip)
+	q47_gabriel_del_torro_23(quip)
+	q48_gabriel_del_torro_24(quip)
+	q49_don_ricardo_11(quip)
+	q50_don_ricardo_12(quip)
+	q51_anyone_5(quip)
 	conflict(scene)
 	meeting(scene)
 end
 
 function.stocker_for_conflict
-	insert data.quip.q37_anyone_5
+	insert data.quip.q37_don_ricardo_8
 	{
 		unique_to_scene!conflict
+		unique_to.don_ricardo
+		handoff_to!gabriel_del_torro
 		introductory
+		tell_text!"I challenge you to a duel!"
+		tell_verb!"Say: I challenge you to a duel!"
+		condition.{X}[don_ricardo.emotion!angry]
+	}
+	
+	insert data.quip.q38_gabriel_del_torro_20
+	{
+		unique_to_scene!conflict
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		directly_follows.q37_don_ricardo_8
+		tell_text!"For Rosa?"
+		tell_verb!"Ask about the stakes"
+	}
+	
+	insert data.quip.q39_don_ricardo_9
+	{
+		unique_to_scene!conflict
+		unique_to.don_ricardo
+		handoff_to!gabriel_del_torro
+		directly_follows.q38_gabriel_del_torro_20
+		tell_text!"Yes!"
+		tell_verb!"Say: Yes!"
+	}
+	
+	insert data.quip.q40_gabriel_del_torro_21
+	{
+		unique_to_scene!conflict
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		directly_follows.q39_don_ricardo_9
+		tell_text!"To the death?"
+		tell_verb!"What is the extent?"
+	}
+	
+	insert data.quip.q41_don_ricardo_10
+	{
+		unique_to_scene!conflict
+		unique_to.don_ricardo
+		handoff_to!gabriel_del_torro
+		directly_follows.q40_gabriel_del_torro_21
+		tell_text!"YES!"
+		tell_verb!"Say: YES!"
+	}
+	
+	insert data.quip.q42_gabriel_del_torro_22
+	{
+		unique_to_scene!conflict
+		constitutes_action.directly_insult
+		constitutes_action.pursue_as_duelists
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		directly_follows.q41_don_ricardo_10
+		tell_text!"I accept! Have at you, you miserable vomitous mass!"
+		tell_verb!"Accept the duel"
+	}
+	
+	insert data.quip.q43_rosa_de_la_gomez_8
+	{
+		unique_to_scene!conflict
+		unique_to.rosa_de_la_gomez
+		directly_follows.q42_gabriel_del_torro_22
+		tell_text!"Wait, please stop this, I cannot have you dying over me!"
+		tell_verb!"Say: Wait, please stop this, I cannot have you dying over me!"
+		condition.{X}[(rosa_de_la_gomez.relationship.don_ricardo.evaluation.romantic_appeal!BV0 and BV0 >= 21 and BV0 <= 50) and (rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV1 and BV1 >= 21 and BV1 <= 50)]
+	}
+	
+	insert data.quip.q44_rosa_de_la_gomez_9
+	{
+		unique_to_scene!conflict
+		unique_to.rosa_de_la_gomez
+		directly_follows.q42_gabriel_del_torro_22
+		tell_text!"I hate to see this happen, but this is the only way for Gabriel and I to be together"
+		tell_verb!"Say: I hate to see this happen, but this is the only way for Gabriel and I to be together"
+		condition.{X}[(rosa_de_la_gomez.relationship.don_ricardo.evaluation.romantic_appeal!BV2 and BV2 >= -100 and BV2 <= -1) and (rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV3 and BV3 >= 21 and BV3 <= 50)]
+	}
+	
+	insert data.quip.q45_rosa_de_la_gomez_10
+	{
+		unique_to_scene!conflict
+		unique_to.rosa_de_la_gomez
+		handoff_to!gabriel_del_torro
+		directly_follows.q42_gabriel_del_torro_22
+		tell_text!"You can't just come into our lives like this and insult us all, get him Don!"
+		tell_verb!"Say: You can't just come into our lives like this and insult us all, get him Don!"
+		condition.{X}[(rosa_de_la_gomez.relationship.don_ricardo.evaluation.romantic_appeal!BV4 and BV4 >= 21 and BV4 <= 50) and (rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV5 and BV5 >= -100 and BV5 <= -1)]
+	}
+	
+	insert data.quip.q46_rosa_de_la_gomez_11
+	{
+		unique_to_scene!conflict
+		unique_to.rosa_de_la_gomez
+		directly_follows.q42_gabriel_del_torro_22
+		tell_text!"I don't even care who wins, I'm leaving."
+		tell_verb!"Say: I don't even care who wins, I'm leaving."
+		condition.{X}[(rosa_de_la_gomez.relationship.don_ricardo.evaluation.romantic_appeal!BV6 and BV6 >= -100 and BV6 <= -1) and (rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV7 and BV7 >= -100 and BV7 <= -1)]
+	}
+	
+	insert data.quip.q47_gabriel_del_torro_23
+	{
+		unique_to_scene!conflict
+		unique_to.gabriel_del_torro
+		directly_follows.q43_rosa_de_la_gomez_8
+		directly_follows.q44_rosa_de_la_gomez_9
+		directly_follows.q45_rosa_de_la_gomez_10
+		directly_follows.q46_rosa_de_la_gomez_11
+		tell_dir!"{A}Not paying any attention to Rosa, the men draw their swords and start circling each other."
+		tell_verb!"Say: Not paying any attention to Rosa, the men draw their swords and start circling each other."
+	}
+	
+	insert data.quip.q48_gabriel_del_torro_24
+	{
+		unique_to_scene!conflict
+		constitutes_action.pursue_as_friends
+		unique_to.gabriel_del_torro
+		handoff_to!don_ricardo
+		directly_follows.q41_don_ricardo_10
+		tell_text!"Don, there's no reason for all of this, aren't we mature enough to settle this peacefully?"
+		tell_verb!"Try to make peace"
+	}
+	
+	insert data.quip.q49_don_ricardo_11
+	{
+		unique_to_scene!conflict
+		unique_to.don_ricardo
+		directly_follows.q48_gabriel_del_torro_24
+		tell_text!"Never! Have at you, you miserable swine!"
+		tell_verb!"Say: Never! Have at you, you miserable swine!"
+		condition.{X}[don_ricardo.relationship.gabriel_del_torro.evaluation.friend!BV8 and BV8 >= -100 and BV8 <= -1]
+	}
+	
+	insert data.quip.q50_don_ricardo_12
+	{
+		unique_to_scene!conflict
+		unique_to.don_ricardo
+		directly_follows.q48_gabriel_del_torro_24
+		tell_text!"Very well, we can just ask Rosa who she prefers."
+		tell_verb!"Say: Very well, we can just ask Rosa who she prefers."
+		condition.{X}[don_ricardo.relationship.gabriel_del_torro.evaluation.friend!BV9 and BV9 >= 21 and BV9 <= 50]
+	}
+	
+	insert data.quip.q51_anyone_5
+	{
+		unique_to_scene!conflict
+		directly_follows.q50_don_ricardo_12
 		tell_text!"With a game of competitive tic tac toe!"
 		tell_verb!"Say: With a game of competitive tic tac toe!"
 	}
@@ -188,7 +349,7 @@ function.stocker_for_meeting
 		directly_follows.q14_don_ricardo_5
 		tell_text!"I'm so sorry. I thought you were dead!"
 		tell_verb!"Apologize"
-		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV0 and BV0 >= 1 and BV0 <= 100]
+		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV10 and BV10 >= 1 and BV10 <= 100]
 	}
 	
 	insert data.quip.q16_rosa_de_la_gomez_3
@@ -201,7 +362,7 @@ function.stocker_for_meeting
 		directly_follows.q14_don_ricardo_5
 		tell_text!"He is twice the man you ever were! --Say that Don Ricardo is the better lover"
 		tell_verb!"Say: He is twice the man you ever were! --Say that Don Ricardo is the better lover"
-		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV1 and BV1 >= -100 and BV1 <= -1]
+		condition.{X}[rosa_de_la_gomez.relationship.gabriel_del_torro.evaluation.romantic_appeal!BV11 and BV11 >= -100 and BV11 <= -1]
 	}
 	
 	insert data.quip.q17_anyone_but_gabriel_del_torro_1
@@ -406,7 +567,6 @@ function.stocker_for_meeting
 		unique_to_scene!meeting
 		topic.rosa
 		constitutes_action.accept_romantic_relationship
-		constitutes_action.directly_insult
 		unique_to.rosa_de_la_gomez
 		handoff_to!gabriel_del_torro
 		directly_follows.q33_gabriel_del_torro_18
@@ -537,6 +697,7 @@ function.start_hello_world_episode
 	insert data.scene_data.conflict
 	{
 		noun!"Conflict"
+		may_leave.rosa_de_la_gomez
 		movement_restricted
 		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
 		setup!stocker_for_conflict
@@ -557,7 +718,7 @@ function.start_hello_world_episode
 		description_more.2!"[gabriel_del_torro] says, 'It is you who soon will be dead!'"
 		description_more.3!"[rosa_de_la_gomez] says, 'Wait! I married Don Ricardo while you were gone! You cannot kill him!'"
 		movement_restricted
-		optional_conclusion.conflict."Settle the dispute"!"There's only one way to finish this."!{}[gabriel_del_torro.in!BV2 and lull_in_room.BV2]
+		optional_conclusion.conflict."Settle the dispute"!"There's only one way to finish this."!{}[gabriel_del_torro.in!BV12 and lull_in_room.BV12]
 		timeout_conclusion.null_scene!"The story has ended due to inactivity."!10000
 		setup!stocker_for_meeting
 	}
