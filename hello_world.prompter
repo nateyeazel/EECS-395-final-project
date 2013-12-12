@@ -106,7 +106,7 @@ Anyone but Gabriel (To Gabriel): But how did you survive?
 
 Don Ricardo ("gasping"):  ... The Philosopher's Stone!
 
-Gabriel (attractively, replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from your cowardly trick, and now it's time to finish this once and for all!
+Gabriel (attractively, insulting Don): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from your cowardly trick, and now it's time to finish this once and for all!
 -- Finish your tale
 
 (ab) Gabriel (attractively, acting masculine): As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance.
@@ -129,7 +129,8 @@ Rosa (accepting a romantic relationship with Gabriel): Oh my! What a tale!
 (a>) (if he is angry) Don Ricardo: I don't believe you! This story must be made up!
 -- Disbelieve Gabriel
 
-Gabriel (assertively): If it's not true, than how am I standing here, hmmm? 
+Gabriel (assertively, insulting Don): If it's not true, than how am I standing here, hmmm? 
+-- Ask if he doesn't believe his eyes
 
 (b) Gabriel: Alas, this tale is too close to my heart to reveal right now
 >> We must instead get to the heart of this matter.
@@ -163,17 +164,23 @@ Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I stil
 
 (Rosa can walk out.)
 
-(if Don is angry) Don (to Gabriel): I challenge you to a duel!
+Gabriel (to Don) : Well what are we going to do?
+-- Ask how this will end
+
+Don (to Gabriel) : I challenge you to a duel!
+-- Fight to the death
 
 Gabriel (to Don) : For Rosa? 
 -- Ask about the stakes 
 
 Don (to Gabriel) : Yes!
+-- Of course
 
 Gabriel (to Don) : To the death?
--- What is the extent?
+-- To what end
 
 Don (to Gabriel) : YES!
+-- Indubitably!
 
 (a) Gabriel (insulting Don, deciding to kill Don): I accept! Have at you, you miserable vomitous mass!
 -- Accept the duel
@@ -184,7 +191,9 @@ Don (to Gabriel) : YES!
 
 (ac) (if Rosa rates Don's romantic appeal as good and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel): You can't just come into our lives like this and insult us all, get him Don!
 
-(ad) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa: I don't even care who wins, I'm leaving. 
+(ad) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa: I don't even care who wins, I'm leaving.
+
+(ae) Rosa: Please don't fight!
 
 (a>) Gabriel (without speaking): Not paying any attention to Rosa, the men draw their swords and start circling each other.
 
