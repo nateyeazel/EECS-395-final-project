@@ -13,21 +13,24 @@ The Heroine ... Rosa De La Gomez
 Don is married to Rosa. Gabriel and Rosa and Don are in the Bedroom.
 Gabriel is a mortal enemy of Don. Gabriel flirts with Rosa. Rosa flirts with Gabriel.   
 
+*** Throughout ***
 
-*** Scene - Meeting ***
+(About Rosa)
 
-Narration: Gabriel swings through the window on a rope into the chambers of Don Ricardo and 
-Rosa. 
->> [Don] says, 'Impossible! You're dead!'
->> [Gabriel] says, 'It is you who soon will be dead!'
->> [Rosa] says, 'Wait! I married Don Ricardo while you were gone! You cannot kill him!'
+(a) Gabriel (deciding to flirt with Rosa, deciding to make an enemy of Don): Mi amore!
+-- Compliment her
+
+(b) Gabriel (insulting Rosa): You cheap whore!
+-- Insult her
+
+(More about Rosa will follow)
 
 (About Don Ricardo)
 
-(a) Gabriel (insulting Don Ricardo): You worthless scoundrel. 
+(a) Gabriel (insulting Don Ricardo): You worthless scoundrel!
 -- Insult him
 
-(aa) Gabriel (insulting Don Ricardo): Perro!
+(aa) Gabriel (insulting Don Ricardo, "spits"): Perro!
 -- Spit On Him
 
 (b) Gabriel (deciding to pursue a friendly relationship with Don): We were young and foolish.
@@ -35,27 +38,34 @@ Rosa.
 
 (More about Don Ricardo will follow)
 
-(About Rosa)
+*** Scene - Meeting ***
 
-(a) Gabriel (deciding to flirt with Rosa, deciding to make an enemy of Don): Mi amore! 
--- Compliment her
+//(The objective "Marry Rosa" will be achieved when Gabriel is married to Rosa.)
 
-(b) Gabriel (insulting Rosa): You cheap whore! 
--- Insult her
+Narration: Gabriel swings through the window on a rope into the chambers of Don Ricardo and 
+Rosa. 
+>> [Don] says, 'Impossible! You're dead!'
+>> [Gabriel] says, 'It is you who soon will be dead!'
+>> [Rosa] says, 'Wait! I married Don Ricardo while you were gone! You cannot kill him!'
 
-(More about Rosa will follow)
+(About Gabriel's death.)
 
+Don: I thought you had been impaled on the thorns of a rose bush!
 
-(About the death.)
+Gabriel (to Don, rudely): You mean, you PUSHED me onto the thorns of a rose bush!
+-- Accuse Don of trying to kill you.
 
-Gabriel (to Don, rudely): That rose bush you pushed me into couldn't kill me!
--- Accuse Don don of trying to kill you.
-
-(a) (if Don is angry) Don: I should have killed you twice! 
+(a) (if Don is angry) Don (menacingly): I should have killed you twice! 
 -- Put him in his place
+
+Gabriel: You couldn't kill me if you tried a thousand times!
+-- Respond defiantly
 
 (b) (if Don is pleased) Don: Well... sorry for trying to kill you.
 -- Try to be friendly
+
+Gabriel (rudely): I care not for your apologies!
+-- Respond defiantly
 
 (>) Rosa: I'm so happy you are alive!
 -- Greet Him
@@ -63,14 +73,12 @@ Gabriel (to Don, rudely): That rose bush you pushed me into couldn't kill me!
 Don Ricardo (menacingly): But the hospital said that you had died!
 -- Exclaim that he should be dead
 
-
-
 (About the marriage.)
 
 Anyone: What does this mean about the marriage?
+-- Ask about the marriage
 
 (More about the marriage will follow.)
-
 
 (About the marriage.)
 
@@ -86,7 +94,7 @@ Gabriel: You two were married while I was lying on my deathbed.
 (b) (if Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel, rudely): He is twice the man you ever were!
 --Say that Don Ricardo is the better lover
 
-(About Gabriel.)
+(Later, about Gabriel.)
 
 Anyone but Gabriel (To Gabriel): But how did you survive?
 -- Ask how he is still alive
@@ -103,17 +111,32 @@ Anyone but Gabriel (To Gabriel): But how did you survive?
 
 Don Ricardo ("gasping"):  ... The Philosopher's Stone!
 
-Gabriel (replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from my cowardly trick, and now it's time to finish this once and for all!
+Gabriel (replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from your cowardly trick, and now it's time to finish this once and for all!
 -- Finish your tale
 
-(ab) Gabriel: As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance
->>
+(ab) Gabriel: As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance.
+>> It was none other than the dread pirate ship the Black Skull, captained by the Dread Pirate Smith!
+>> They raided the island the hospital was on, leaving me no choice but to stowaway in their ship.
 -- Say that you joined a roving gang of pirates
+
+Anyone except Gabriel: But how did you get here?
+
+Gabriel: After stowing away I considered my options, and decided that I would need to infiltrate their crew to survive.
+>> Eventually I claimed the title of Dread Pirate Smith for myself.
+-- Say you took over the ship.
+
+Anyone except Gabriel (replying): Wait, Dread Pirate Smith is a title?
+
+Gabriel (replying): Yes, the original Dread Pirate Smith died over 100 years ago.
+
+(a>) (if he is angry) Don Ricardo: I don't believe you! This story must be made up!
+-- Disbelieve Gabriel
+
+Gabriel (assertively): If it's not true, than how am I standing here, hmmm?
+-- The proof is in the pudding
 
 (b) Gabriel: Alas, this tale is too close to my heart to reveal right now
 >> We must instead get to the heart of this matter.
 -- Remain mysterious and get back to the point
 
 (>) Anyone but Gabriel: You're right, it's time to settle this dispute
-
-(Continuing on to the marriage)
