@@ -17,10 +17,10 @@ Gabriel is a mortal enemy of Don. Gabriel flirts with Rosa. Rosa flirts with Gab
 
 (About Rosa)
 
-(a) Gabriel (deciding to flirt with Rosa, deciding to make an enemy of Don): Mi amore!
+(a) Gabriel (deciding to make an enemy of Don, deciding to flirt with Rosa): Mi amore!
 -- Compliment her
 
-(b) Gabriel (insulting Rosa): You cheap whore!
+(b) Gabriel (insulting Rosa): You cheap harlot!
 -- Insult her
 
 (More about Rosa will follow)
@@ -50,7 +50,7 @@ Rosa.
 
 (About Gabriel.)
 
-Don: I thought you had been impaled on the thorns of a rose bush!
+Don (to Gabriel): I thought you had been impaled on the thorns of a rose bush!
 
 Gabriel (to Don, rudely): You mean, you PUSHED me onto the thrones of a rose bush!
 -- Accuse Don of trying to kill you.
@@ -106,7 +106,7 @@ Anyone but Gabriel (To Gabriel): But how did you survive?
 
 Don Ricardo ("gasping"):  ... The Philosopher's Stone!
 
-Gabriel (attractively, replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from my cowardly trick, and now it's time to finish this once and for all!
+Gabriel (attractively, replying): Indeed! So you now see that you can not hope to live up to me! With the stone, I was able to recover from your cowardly trick, and now it's time to finish this once and for all!
 -- Finish your tale
 
 (ab) Gabriel (attractively, acting masculine): As I was lying there in that seaside hospital, halfway to the gates of heaven, I heard the firing of cannons in the distance.
@@ -118,6 +118,7 @@ Anyone except Gabriel: But how did you get here?
 
 Gabriel: After stowing away I considered my options and decided that I would need to infiltrate their crew to survive.
 >> Eventually I claimed the title of Dread Pirate Smith for myself.
+-- You joined the crew
 
 Anyone except Gabriel (replying): Wait, Dread Pirate Smith is a title?
 
@@ -126,9 +127,9 @@ Gabriel (replying): Yes, the original Dread Pirate Smith died over 100 years ago
 Rosa (accepting a romantic relationship with Gabriel): Oh my! What a tale!
 
 (a>) (if he is angry) Don Ricardo: I don't believe you! This story must be made up!
---Disbelieve Gabriel
+-- Disbelieve Gabriel
 
-Gabriel (assertively): If it's not true, than how am I standing here, hmmm?
+Gabriel (assertively): If it's not true, than how am I standing here, hmmm? 
 
 (b) Gabriel: Alas, this tale is too close to my heart to reveal right now
 >> We must instead get to the heart of this matter.
@@ -146,7 +147,7 @@ Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I stil
 (a) Gabriel (to Rosa, deciding to flirt with Rosa, attractively): I believe you my dear. You are still as beautiful as ever.
 -- Believe Her
 
-(aa) Rosa (accepting a romantic relationship with Gabriel, insulting Don): You know I only ever loved you!
+(aa) Rosa (accepting a romantic relationship with Gabriel, insulting Don, to Gabriel): You know I only ever loved you!
 -- Respond
 
 (b) Gabriel (insulting Rosa): You expect me to believe that? You were probably in on it with him!
@@ -155,3 +156,9 @@ Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I stil
 (ba) Rosa (insulting Gabriel): I wish he had killed you! You are ruining everything!
 (She becomes visibly angry - "She is shocked that Gabriel did not believe her.")
 -- Retort
+
+(End on option "Settle the dispute" if there is a lull where Gabriel is and go to Conflict. "There's only one way to finish this.")
+
+*** Scene - Conflict ***
+
+Anyone: With a game of competitive tic tac toe!
