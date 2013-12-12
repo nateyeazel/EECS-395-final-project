@@ -192,11 +192,11 @@ Don (to Gabriel) : YES!
 (a) Gabriel (insulting Don, deciding to kill Don): I accept! Have at you, you miserable vomitous mass!
 -- Accept the duel
 
-(aa)(if Rosa rates Don's romantic appeal as good and Rosa rates Gabriel's romantic appeal as good) Rosa: Wait, please stop this, I cannot have you dying over me! 
+(aa)(if Rosa rates Don's romantic appeal as better than neutral and Rosa rates Gabriel's romantic appeal as better than neutral) Rosa: Wait, please stop this, I cannot have you dying over me! 
 
-(ab) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as good) Rosa: I hate to see this happen, but this is the only way for Gabriel and I to be together.
+(ab) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as better than neutral) Rosa: I hate to see this happen, but this is the only way for Gabriel and I to be together.
 
-(ac) (if Rosa rates Don's romantic appeal as good and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel): You can't just come into our lives like this and insult us all, get him Don!
+(ac) (if Rosa rates Don's romantic appeal as better than neutral and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa (to Gabriel): You can't just come into our lives like this and insult us all, get him Don!
 
 (ad) (if Rosa rates Don's romantic appeal as worse than neutral and Rosa rates Gabriel's romantic appeal as worse than neutral) Rosa: I don't even care who wins, I'm leaving.
 
