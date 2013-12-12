@@ -125,6 +125,8 @@ Anyone except Gabriel (replying): Wait, Dread Pirate Smith is a title?
 Gabriel (replying): Yes, the original Dread Pirate Smith died over 100 years ago.
 
 Rosa (accepting a romantic relationship with Gabriel): Oh my! What a tale!
+(She openly rates Gabriel's romantic appeal 50% higher - "Gabriel is such a charmer".)
+-- Rosa Reacts
 
 (a>) (if he is angry) Don Ricardo: I don't believe you! This story must be made up!
 -- Disbelieve Gabriel
@@ -149,6 +151,7 @@ Rosa (to Gabriel): When I heard you had died, I wept for an entire month. I stil
 -- Believe Her
 
 (aa) Rosa (accepting a romantic relationship with Gabriel, to Gabriel): You know I only ever loved you!
+(She openly rates Gabriel's romantic appeal 50% higher - "Gabriel is such a charmer".)
 -- Respond
 
 (b) Gabriel (insulting Rosa): You expect me to believe that? You were probably in on it with him!

@@ -507,11 +507,13 @@ function.stocker_for_meeting
 		unique_to_scene!meeting
 		topic.gabriel
 		constitutes_action.accept_romantic_relationship
+		shifts_to_evaluation.gabriel_del_torro.romantic_appeal!50!"{A,X}Gabriel is such a charmer"
+		reveals_evaluation.gabriel_del_torro.romantic_appeal.-100.100
 		unique_to.rosa_de_la_gomez
 		handoff_to!gabriel_del_torro
 		directly_follows.q26_gabriel_del_torro_15
 		tell_text!"Oh my! What a tale!"
-		tell_verb!"Say: Oh my! What a tale!"
+		tell_verb!"Rosa Reacts"
 	}
 	
 	insert data.quip.q28_don_ricardo_7
@@ -591,6 +593,8 @@ function.stocker_for_meeting
 		unique_to_scene!meeting
 		topic.rosa
 		constitutes_action.accept_romantic_relationship
+		shifts_to_evaluation.gabriel_del_torro.romantic_appeal!50!"{A,X}Gabriel is such a charmer"
+		reveals_evaluation.gabriel_del_torro.romantic_appeal.-100.100
 		unique_to.rosa_de_la_gomez
 		handoff_to!gabriel_del_torro
 		directly_follows.q33_gabriel_del_torro_18
